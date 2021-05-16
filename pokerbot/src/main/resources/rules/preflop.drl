@@ -1,0 +1,14 @@
+package rules
+
+import bots.bongcloudbot.HandInfo;
+import com.biotools.meerkat.Action;
+
+rule "Choose action"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
