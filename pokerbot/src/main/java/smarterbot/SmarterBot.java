@@ -1,4 +1,4 @@
-package bots.smarterbot;
+package smarterbot;
 
 import java.util.LinkedList;
 
@@ -37,7 +37,7 @@ public class SmarterBot implements Player {
     private Preferences prefs; // the configuration options for this bot
 
     private boolean didRaise; // did we raise preflop?
-    private bots.smarterbot.Action preflopLevel; // what strategy will we be using for this hand
+    private smarterbot.Action preflopLevel; // what strategy will we be using for this hand
     private LinkedList<PlayerStats> stats; //list of all players histories
     private History history;
     private double prePotSize; // size of the pot when we limped or called (counting amount we put in)
@@ -68,7 +68,7 @@ public class SmarterBot implements Player {
         prePotSize = stackSize = 0;
         lastRaiser = -1;
         cBetter = -1;
-        preflopLevel = bots.smarterbot.Action.INVALID;
+        preflopLevel = smarterbot.Action.INVALID;
         stats = new LinkedList<PlayerStats>();
         history = new History();
 
@@ -339,7 +339,7 @@ public class SmarterBot implements Player {
     public void gameOverEvent() {
 
         double profit = gi.getBankRoll(ourSeat) - gi.getPlayer(ourSeat).getBankRollAtStartOfHand();
-        bots.smarterbot.Action action = history.update(c1, c2, profit, preflopLevel.getValue(), curTable.getFlopAction(c1, c2).getValue());
+        smarterbot.Action action = history.update(c1, c2, profit, preflopLevel.getValue(), curTable.getFlopAction(c1, c2).getValue());
         if (action.getValue() != Action.INVALID) {
             curTable.setFlopAction(c1, c2, action);
         }
@@ -367,15 +367,15 @@ public class SmarterBot implements Player {
         double toCall = gi.getAmountToCall(ourSeat);
 
         //note the following action is our Action.class, not theirs
-        bots.smarterbot.Action action = preflopLevel;
+        smarterbot.Action action = preflopLevel;
 
-        if (action == bots.smarterbot.Action.FOLD) {
+        if (action == smarterbot.Action.FOLD) {
             if (toCall == 0) {
                 return this.call(toCall);
             } else {
                 return Action.foldAction(toCall);
             }
-        } else if (action == bots.smarterbot.Action.LIMP) {
+        } else if (action == smarterbot.Action.LIMP) {
             if (toCall == 0) {
                 this.limped = false;
                 return this.call(toCall);
@@ -411,7 +411,7 @@ public class SmarterBot implements Player {
                     return Action.foldAction(toCall);
                 }
             }
-        } else if (action == bots.smarterbot.Action.CALL) {
+        } else if (action == smarterbot.Action.CALL) {
             if (toCall == 0) { // we are BB, and no raise
                 this.called = false;
                 return Action.callAction(toCall);
@@ -464,7 +464,7 @@ public class SmarterBot implements Player {
                     return Action.foldAction(toCall);
                 }
             }
-        } else if (action == bots.smarterbot.Action.RAISE) {
+        } else if (action == smarterbot.Action.RAISE) {
             if (gi.getNumRaises() == 0) { //then raise!
                 return this.raise(toCall);
             } else if (gi.getNumRaises() == 1) { //then call a raise
@@ -502,7 +502,7 @@ public class SmarterBot implements Player {
             } else {
                 return Action.checkOrFoldAction(toCall);
             }
-        } else if (action == bots.smarterbot.Action.RERAISE) {
+        } else if (action == smarterbot.Action.RERAISE) {
             if (gi.getNumRaises() <= 1) { //no raise or one raise so far
                 this.didRaise = true;
                 return this.raise(toCall);
@@ -561,7 +561,7 @@ public class SmarterBot implements Player {
                     return Action.checkOrFoldAction(toCall);
                 }
             }
-        } else if (action == bots.smarterbot.Action.PREMIUM) {
+        } else if (action == smarterbot.Action.PREMIUM) {
             return this.raise(toCall);
         }
         // should be unreachable

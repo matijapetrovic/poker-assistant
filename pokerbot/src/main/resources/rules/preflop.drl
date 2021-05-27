@@ -1,14 +1,48 @@
 package rules
 
 import bots.bongcloudbot.HandInfo;
+import bots.bongcloudbot.BongcloudAction;
 import com.biotools.meerkat.Action;
 
-rule "Choose action"
+
+
+rule "Set starting hand matrix"
     when
-        $hi: HandInfo($card1: card1, $card2: card2, action == null)
+        $hi: HandInfo($card1: card1, $card2: card2, preliminaryAction == null)
+    then
+        modify($hi) {
+        	setMatrixAction($card1, $card2)
+        }
+end
+
+rule "Set preliminaryAction - Action FOLD"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.FOLD, action == null)
     then
         System.out.println("Hand: " + $card1 + " " + $card2);
         modify($hi) {
-            setAction(Action.raiseAction(10.0, 10.0))
+        	setPreliminaryAction(BongcloudAction.FOLD)
+        }
+end
+
+
+rule "Set preliminaryAction - Action CHECK"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.CALL, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setPreliminaryAction(BongcloudAction.CALL)
+        }
+end
+
+
+rule "Set preliminaryAction - Action RAISE"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.RAISE, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setPreliminaryAction(BongcloudAction.RAISE)
         }
 end

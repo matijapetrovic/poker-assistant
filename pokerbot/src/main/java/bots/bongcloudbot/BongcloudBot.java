@@ -10,6 +10,7 @@ import org.kie.api.runtime.KieSession;
 import com.biotools.meerkat.Action;
 import com.biotools.meerkat.Card;
 import com.biotools.meerkat.GameInfo;
+import com.biotools.meerkat.Holdem;
 import com.biotools.meerkat.Player;
 import com.biotools.meerkat.PlayerInfo;
 import com.biotools.meerkat.util.Preferences;
@@ -21,7 +22,9 @@ public class BongcloudBot implements Player {
 	private Preferences preferences;
 	private GameInfo gameInfo;
 	
+	// game attributes we need
 	private Map<String, PlayerDesc> playerDescriptions;
+	
 
 	private KieSession kSession;
 	private KieContainer kContainer;
@@ -35,16 +38,118 @@ public class BongcloudBot implements Player {
 		playerDescriptions = new HashMap<String, PlayerDesc>();
 	}
 	
+	public Action preFlopAction() {
+		return null;
+	}
+	
 	@Override
 	public Action getAction() {
+		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo);
+		hi.evaluateHand();
+		hi.setMatrixAction(card1, card2);
+		kSession.insert(hi);
 		
-		if (gameInfo.isPreFlop()) {
-			HandInfo hi = new HandInfo(card1, card2);
-			kSession.insert(hi);
-			kSession.fireAllRules();
-			return hi.getAction();
-		}
-		return Action.callAction(gameInfo.getAmountToCall(seat));
+		Action action = Action.callAction(gameInfo.getAmountToCall(seat));
+		kSession.fireAllRules();
+		action = hi.getAction();
+		//		switch (gameInfo.getStage()) {
+//	        case Holdem.PREFLOP: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.FLOP: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.TURN: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.RIVER: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        default: {
+//	            throw new Error();
+//	        }
+//	    }
+		return action;
+	}
+
+	public Card getCard1() {
+		return card1;
+	}
+
+	public void setCard1(Card card1) {
+		this.card1 = card1;
+	}
+
+	public Card getCard2() {
+		return card2;
+	}
+
+	public void setCard2(Card card2) {
+		this.card2 = card2;
+	}
+
+	public int getSeat() {
+		return seat;
+	}
+
+	public void setSeat(int seat) {
+		this.seat = seat;
+	}
+
+	public Preferences getPreferences() {
+		return preferences;
+	}
+
+	public void setPreferences(Preferences preferences) {
+		this.preferences = preferences;
+	}
+
+	public GameInfo getGameInfo() {
+		return gameInfo;
+	}
+
+	public void setGameInfo(GameInfo gameInfo) {
+		this.gameInfo = gameInfo;
+	}
+
+	public Map<String, PlayerDesc> getPlayerDescriptions() {
+		return playerDescriptions;
+	}
+
+	public void setPlayerDescriptions(Map<String, PlayerDesc> playerDescriptions) {
+		this.playerDescriptions = playerDescriptions;
+	}
+
+	public KieSession getkSession() {
+		return kSession;
+	}
+
+	public void setkSession(KieSession kSession) {
+		this.kSession = kSession;
+	}
+
+	public KieContainer getkContainer() {
+		return kContainer;
+	}
+
+	public void setkContainer(KieContainer kContainer) {
+		this.kContainer = kContainer;
+	}
+
+	public KieServices getKs() {
+		return ks;
+	}
+
+	public void setKs(KieServices ks) {
+		this.ks = ks;
 	}
 
 	@Override
