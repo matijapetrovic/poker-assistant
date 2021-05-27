@@ -1,4 +1,4 @@
-package bots.smarterbot;
+package smarterbot;
 
 public enum Action {
     PREMIUM(5),

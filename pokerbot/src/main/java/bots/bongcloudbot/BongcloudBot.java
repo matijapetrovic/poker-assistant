@@ -46,35 +46,37 @@ public class BongcloudBot implements Player {
 	public Action getAction() {
 		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo);
 		hi.evaluateHand();
+		hi.setMatrixAction(card1, card2);
 		kSession.insert(hi);
 		
-		
 		Action action = Action.callAction(gameInfo.getAmountToCall(seat));
-		switch (gameInfo.getStage()) {
-	        case Holdem.PREFLOP: {
-	        	kSession.fireAllRules();
-				action = hi.getAction();
-	        }
-	        break;
-	        case Holdem.FLOP: {
-	        	kSession.fireAllRules();
-				action = hi.getAction();
-	        }
-	        break;
-	        case Holdem.TURN: {
-	        	kSession.fireAllRules();
-				action = hi.getAction();
-	        }
-	        break;
-	        case Holdem.RIVER: {
-	        	kSession.fireAllRules();
-				action = hi.getAction();
-	        }
-	        break;
-	        default: {
-	            throw new Error();
-	        }
-	    }
+		kSession.fireAllRules();
+		action = hi.getAction();
+		//		switch (gameInfo.getStage()) {
+//	        case Holdem.PREFLOP: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.FLOP: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.TURN: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        case Holdem.RIVER: {
+//	        	kSession.fireAllRules();
+//				action = hi.getPreliminaryAction();
+//	        }
+//	        break;
+//	        default: {
+//	            throw new Error();
+//	        }
+//	    }
 		return action;
 	}
 

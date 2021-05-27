@@ -1,5 +1,8 @@
 package bots.bongcloudbot;
 
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
 import org.kie.api.definition.type.PropertyReactive;
 
 import com.biotools.meerkat.Action;
@@ -11,9 +14,11 @@ public class HandInfo {
 	private Card card1;
 	private Card card2;
 	private Action action;
-	public Action preliminaryAction;
+	private bots.bongcloudbot.BongcloudAction  preliminaryAction;
+	private bots.bongcloudbot.BongcloudAction matrixAction; 
 	
 	private CardEvaluator handEvaluator;
+	private StartingHandMatrix startingHandMatrix;
 	
 	private int numPlayers; 	  // number of players
 	private int numActivePlayers; // number of players left in the hand (including us)
@@ -39,7 +44,26 @@ public class HandInfo {
 		sameSuit = isSameSuit();
 		
 		handEvaluator = new CardEvaluator(card1, card2);
+		startingHandMatrix = new StartingHandMatrix();
+		startingHandMatrix.setDefaultMatrix();
 	}
+	
+
+	
+	
+	public bots.bongcloudbot.BongcloudAction getMatrixAction() {
+		return matrixAction;
+	}
+
+
+	public  bots.bongcloudbot.BongcloudAction  getPreliminaryAction() {
+		return preliminaryAction;
+	}
+
+	public void setPreliminaryAction( bots.bongcloudbot.BongcloudAction  preliminaryAction) {
+		this.preliminaryAction = preliminaryAction;
+	}
+
 	
 	private boolean isSameSuit() {
 		return card1.getSuit() == card2.getSuit();
@@ -62,7 +86,8 @@ public class HandInfo {
 		this.card2 = card2;
 	}
 	public Action getAction() {
-		return action;
+		return Action.raiseAction(1.0, 1.0);
+		//return action;
 	}
 	public void setAction(Action action) {
 		this.action = action;
@@ -132,16 +157,17 @@ public class HandInfo {
 		this.cardsStrength = cardsStrength;
 	}
 
-	public Action getPreliminaryAction() {
-		return preliminaryAction;
-	}
-
-	public void setPreliminaryAction(Action preliminaryAction) {
-		this.preliminaryAction = preliminaryAction;
-	}
-
 	public void setSameSuit(boolean sameSuit) {
 		this.sameSuit = sameSuit;
+	}
+
+	public void setMatrixAction(bots.bongcloudbot.BongcloudAction matrixAction) {
+		this.matrixAction = matrixAction;
+	}
+	
+	
+	public void setMatrixAction(Card card1, Card card2) {
+		this.matrixAction = startingHandMatrix.getFlopAction(card1, card2);
 	}
 	
 }

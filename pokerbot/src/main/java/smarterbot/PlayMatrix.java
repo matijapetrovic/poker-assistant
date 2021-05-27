@@ -1,4 +1,4 @@
-package bots.smarterbot;
+package smarterbot;
 
 import com.biotools.meerkat.Card;
 
