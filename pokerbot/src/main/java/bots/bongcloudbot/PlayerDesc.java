@@ -28,31 +28,44 @@ public class PlayerDesc {
 	};
 	
 	
-	private Aggro aggressivenes;
+	private Aggro aggressiveness;
 	private Tight tightness;
+	private String playerName;
 	
-	public PlayerDesc() {
-		this.aggressivenes = Aggro.NEUTRAL;
+	public PlayerDesc(String playerName) {
+		this.playerName = playerName;
+		this.aggressiveness = Aggro.NEUTRAL;
 		this.tightness = Tight.NEUTRAL;
 	}
 	
-	public PlayerDesc(Aggro aggressivenes, Tight tightness) {
+	public PlayerDesc(String playerName, Aggro aggressivenes, Tight tightness) {
 		super();
-		this.aggressivenes = aggressivenes;
+		this.playerName = playerName;
+		this.aggressiveness = aggressivenes;
 		this.tightness = tightness;
 	}
 
 
-	public Aggro getAggressivenes() {
-		return aggressivenes;
+	public Aggro getAggressiveness() {
+		return aggressiveness;
 	}
 	public Tight getTightness() {
 		return tightness;
 	}
-	public void setAggressivenes(Aggro aggressivenes) {
-		this.aggressivenes = aggressivenes;
+	public void setAggressiveness(Aggro aggressiveness) {
+		this.aggressiveness = aggressiveness;
 	}
 	public void setTightness(Tight tightness) {
 		this.tightness = tightness;
 	}
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	
+	
 }

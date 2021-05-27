@@ -1,48 +1,201 @@
 package rules
 
+import bots.bongcloudbot.PlayerDesc.Tight;
+import bots.bongcloudbot.PlayerDesc.Aggro;
+import bots.bongcloudbot.PlayerDesc;
 import bots.bongcloudbot.HandInfo;
 import bots.bongcloudbot.BongcloudAction;
+import bots.bongcloudbot.StartingHandMatrix;
 import com.biotools.meerkat.Action;
+import com.biotools.meerkat.GameInfo;
+
+global GameInfo gameInfo;
+
+rule "Playstyle TIGHT"
+	when
+		$tightness: Tight(level == 1)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		StartingHandMatrix $matrix = new StartingHandMatrix();
+		$matrix.setTightMatrix();
+		insert($matrix);
+end
+
+rule "Playstyle NEUTRAL"
+when
+		$tightness: Tight(level == 0)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		StartingHandMatrix $matrix = new StartingHandMatrix();
+		$matrix.setNeutralMatrix();
+		insert($matrix);
+end
 
 
+rule "Playstyle LOOSE"
+when
+		$tightness: Tight(level == -1)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		StartingHandMatrix $matrix = new StartingHandMatrix();
+		$matrix.setLooseMatrix();
+		insert($matrix);
+end
 
-rule "Set starting hand matrix"
+rule "Set preliminary action"
     when
+    	$matrix: StartingHandMatrix()
         $hi: HandInfo($card1: card1, $card2: card2, preliminaryAction == null)
     then
+		System.out.println("Rule: " + drools.getRule().getName());
+		System.out.println("Preliminary action: " + $matrix.getFlopAction($card1, $card2));
         modify($hi) {
-        	setMatrixAction($card1, $card2)
+        	setPreliminaryAction($matrix.getFlopAction($card1, $card2));
         }
 end
 
-rule "Set preliminaryAction - Action FOLD"
-    when
-        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.FOLD, action == null)
-    then
-        System.out.println("Hand: " + $card1 + " " + $card2);
-        modify($hi) {
-        	setPreliminaryAction(BongcloudAction.FOLD)
-        }
+rule "Preliminary fold"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.FOLD, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction($toCall == 0 ? Action.callAction($toCall) : Action.foldAction($toCall));
+		}
 end
 
 
-rule "Set preliminaryAction - Action CHECK"
-    when
-        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.CALL, action == null)
-    then
-        System.out.println("Hand: " + $card1 + " " + $card2);
-        modify($hi) {
-        	setPreliminaryAction(BongcloudAction.CALL)
-        }
+rule "Preliminary call when free"
+	when
+		$hi: HandInfo($toCall: toCall == 0, preliminaryAction == BongcloudAction.CALL, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
+rule "Preliminary call when no raise"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 0, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
+rule "Preliminary call when more than one raise"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() > 1, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.foldAction($toCall));
+		}
+end
+
+rule "Preliminary call when only one raise but too big"
+	when
+		$hi: HandInfo($toCall: toCall > gameInfo.getBigBlindSize() * 4, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.foldAction($toCall));
+		}
+end
+
+rule "Preliminary call when only one raise and loose field"
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
+						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
+		Number(intValue < 0) from accumulate(
+			PlayerDesc(
+				$tight: tightness.level
+			) from $playersInHand,
+			sum($tight)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.raiseAction($toCall, gameInfo.getBigBlindSize() * 2.5));
+		}
+end
+
+rule "Preliminary call when only one raise and tight field"
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
+						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
+		Number(intValue >= 0) from accumulate(
+			PlayerDesc(
+				$tight: tightness.level
+			) from $playersInHand,
+			sum($tight)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
+rule "Preliminary raise when no raises"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 0, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.raiseAction($toCall, gameInfo.getBigBlindSize() * 4));
+		}
 end
 
 
-rule "Set preliminaryAction - Action RAISE"
-    when
-        $hi: HandInfo($card1: card1, $card2: card2, matrixAction.getValue() == Action.RAISE, action == null)
-    then
-        System.out.println("Hand: " + $card1 + " " + $card2);
-        modify($hi) {
-        	setPreliminaryAction(BongcloudAction.RAISE)
-        }
+rule "Preliminary raise when one raise"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 1, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction($toCall <= gameInfo.getBigBlindSize() * 5 ? Action.callAction($toCall) : Action.foldAction($toCall));
+		}
+end
+
+rule "Preliminary raise when 3+bet"
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() >=3, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify ($hi) {
+			setAction(Action.foldAction($toCall));
+		}
+end
+
+rule "Preliminary raise when aggressive players"
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall, 
+						preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 2,
+						 action == null)
+		Number(intValue > 0) from accumulate(
+			PlayerDesc(
+				$aggro: aggressiveness.level
+			) from $playersInHand,
+			sum($aggro)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.raiseAction($toCall, $toCall * 2));
+		}
+end
+
+
+rule "Preliminary premium"
+
+	when
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.PREMIUM, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify ($hi) {
+			setAction(Action.raiseAction($toCall, gameInfo.getBigBlindSize() * 2));
+		}
 end

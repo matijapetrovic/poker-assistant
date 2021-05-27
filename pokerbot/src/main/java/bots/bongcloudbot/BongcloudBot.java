@@ -1,7 +1,7 @@
 package bots.bongcloudbot;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
@@ -21,63 +21,54 @@ public class BongcloudBot implements Player {
 	private int seat;
 	private Preferences preferences;
 	private GameInfo gameInfo;
-	
-	// game attributes we need
-	private Map<String, PlayerDesc> playerDescriptions;
-	
 
+	private PlayerStats playerStats;
+	
 	private KieSession kSession;
 	private KieContainer kContainer;
 	private KieServices ks;
+	
+	
 	
 	public BongcloudBot() {
 		ks = KieServices.Factory.get();
 		kContainer = ks.getKieClasspathContainer();
 		kSession = kContainer.newKieSession("ksession-rules");
-		
-		playerDescriptions = new HashMap<String, PlayerDesc>();
+		playerStats = new PlayerStats();
 	}
 	
 	public Action preFlopAction() {
 		return null;
 	}
 	
+	private List<PlayerDesc> getActivePlayers() {
+        List<PlayerDesc> list = new ArrayList<PlayerDesc>();
+        int player = this.seat;
+        player = gameInfo.nextActivePlayer(player);
+        while (player != this.seat) {
+            String playerName = gameInfo.getPlayerName(player);
+            list.add(playerStats.getPlayerDesc(playerName));
+            player = gameInfo.nextActivePlayer(player);
+        }
+        return list;
+    }
+	
 	@Override
 	public Action getAction() {
-		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo);
-		hi.evaluateHand();
-		hi.setMatrixAction(card1, card2);
-		kSession.insert(hi);
-		
-		Action action = Action.callAction(gameInfo.getAmountToCall(seat));
-		kSession.fireAllRules();
-		action = hi.getAction();
-		//		switch (gameInfo.getStage()) {
-//	        case Holdem.PREFLOP: {
-//	        	kSession.fireAllRules();
-//				action = hi.getPreliminaryAction();
-//	        }
-//	        break;
-//	        case Holdem.FLOP: {
-//	        	kSession.fireAllRules();
-//				action = hi.getPreliminaryAction();
-//	        }
-//	        break;
-//	        case Holdem.TURN: {
-//	        	kSession.fireAllRules();
-//				action = hi.getPreliminaryAction();
-//	        }
-//	        break;
-//	        case Holdem.RIVER: {
-//	        	kSession.fireAllRules();
-//				action = hi.getPreliminaryAction();
-//	        }
-//	        break;
-//	        default: {
-//	            throw new Error();
-//	        }
-//	    }
-		return action;
+		if (gameInfo.getStage() == Holdem.PREFLOP) {
+			HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers());
+			kSession.setGlobal("gameInfo", gameInfo);
+			kSession.insert(hi);
+			kSession.insert(PlayerDesc.Tight.NEUTRAL);
+			kSession.fireAllRules();
+			
+			kSession.delete(kSession.getFactHandle(hi));
+			return hi.getAction();
+		}
+		else {
+			
+			return Action.callAction(gameInfo);
+		}
 	}
 
 	public Card getCard1() {
@@ -120,14 +111,6 @@ public class BongcloudBot implements Player {
 		this.gameInfo = gameInfo;
 	}
 
-	public Map<String, PlayerDesc> getPlayerDescriptions() {
-		return playerDescriptions;
-	}
-
-	public void setPlayerDescriptions(Map<String, PlayerDesc> playerDescriptions) {
-		this.playerDescriptions = playerDescriptions;
-	}
-
 	public KieSession getkSession() {
 		return kSession;
 	}
@@ -168,11 +151,12 @@ public class BongcloudBot implements Player {
 	@Override
 	public void gameStartEvent(GameInfo gameInfo) {
 		this.gameInfo = gameInfo;
+		List<PlayerDesc> playerDescriptions = new ArrayList<>();
 		for (int seat = 0; seat < gameInfo.getNumSeats(); seat++) {
-			playerDescriptions.put(gameInfo.getPlayerName(seat), new PlayerDesc());
+			playerDescriptions.add(new PlayerDesc(gameInfo.getPlayerName(seat)));
 		}
+		playerStats.setPlayerDescriptions(playerDescriptions);
 	}
-	
 	
 	
 	@Override
