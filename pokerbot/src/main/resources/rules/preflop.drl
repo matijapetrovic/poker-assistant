@@ -2,13 +2,208 @@ package rules
 
 import bots.bongcloudbot.HandInfo;
 import com.biotools.meerkat.Action;
+import bots.bongcloudbot.CardEvaluator;
+import bots.bongcloudbot.CardsStrength;
+import bots.bongcloudbot.WinningChances;
 
-rule "Choose action"
+
+rule "Cards WEAK, not same suit, number of players 1 or 2"
     when
-        $hi: HandInfo($card1: card1, $card2: card2, action == null)
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers > 0, numPlayers < 3, sameSuit == true, action == null)
     then
         System.out.println("Hand: " + $card1 + " " + $card2);
         modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+rule "Cards WEAK, not same suit, number of players 1 or 2"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers > 0, numPlayers < 3, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.BAD)
+            setAction(Action.foldAction(0))
+        }
+end
+
+rule "Cards WEAK, same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.BAD)
+            setAction(Action.foldAction(0))
+        }
+end
+
+rule "Cards WEAK, not same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers > 2, numPlayers < 5, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.BAD)
+            setAction(Action.foldAction(0))
+        }
+end
+
+rule "Cards WEAK, same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.BAD)
+            setAction(Action.foldAction(0))
+        }
+end
+
+rule "Cards WEAK, not same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.WEAK, numPlayers >= 5 sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.BAD)
+            setAction(Action.foldAction(0))
+        }
+end
+
+// medium
+
+rule "Cards MEDIUM, not same suit, number of players 1 or 2"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers > 0, numPlayers < 3, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players 1 or 2"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers > 0, numPlayers < 3, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+rule "Cards MEDIUM, same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers > 2, numPlayers < 5, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+rule "Cards MEDIUM, same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.MEDIUM, numPlayers >= 5 sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.MEDIUM)
+            setAction(Action.checkAction(0))
+        }
+end
+
+// strong
+rule "Cards MEDIUM, not same suit, number of players 1 or 2"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers > 0, numPlayers < 3, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players 1 or 2"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers > 0, numPlayers < 3, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players 3 or 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers > 2, numPlayers < 5, sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers > 2, numPlayers < 5, sameSuit == true, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
+            setAction(Action.raiseAction(10.0, 10.0))
+        }
+end
+
+rule "Cards MEDIUM, not same suit, number of players: more than 4"
+    when
+        $hi: HandInfo($card1: card1, $card2: card2, cardsStrength == CardsStrength.STRONG, numPlayers >= 5 sameSuit == false, action == null)
+    then
+        System.out.println("Hand: " + $card1 + " " + $card2);
+        modify($hi) {
+        	setChancesBasedOnHand(WinningChances.GOOD)
             setAction(Action.raiseAction(10.0, 10.0))
         }
 end
