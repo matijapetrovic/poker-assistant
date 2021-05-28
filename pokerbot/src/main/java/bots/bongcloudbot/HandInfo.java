@@ -7,6 +7,8 @@ import org.kie.api.definition.type.PropertyReactive;
 import com.biotools.meerkat.Action;
 import com.biotools.meerkat.Card;
 import com.biotools.meerkat.GameInfo;
+import com.biotools.meerkat.Hand;
+import com.biotools.meerkat.HandEvaluator;
 
 @PropertyReactive
 public class HandInfo {
@@ -15,7 +17,7 @@ public class HandInfo {
 	private Action action;
 	private BongcloudAction preliminaryAction;
 	
-	
+
 	private int numPlayers; 	  // number of players
 	private int numActivePlayers; // number of players left in the hand (including us)
 	private double toCall;        // amount of money bongcloud bot shoul call
@@ -25,9 +27,18 @@ public class HandInfo {
 	private double bankRoll;     // amount of money I have
 	private Integer IR;
 
+	private Double handRank;
+	private boolean didRaise;
+	
 	private List<PlayerDesc> playersInHand;
 	
-	public HandInfo(Card card1, Card card2, int seat, GameInfo gameInfo, List<PlayerDesc> playersInHand) {
+	public HandInfo(
+			Card card1, 
+			Card card2, 
+			int seat, 
+			GameInfo gameInfo, 
+			List<PlayerDesc> playersInHand,
+			boolean didRaise) {
 		this.card1 = card1;
 		this.card2 = card2;
 		numPlayers = gameInfo.getNumPlayers();
@@ -38,9 +49,21 @@ public class HandInfo {
 		bankRoll = gameInfo.getBankRoll(seat);
 		sameSuit = isSameSuit();
 		
+		handRank = null;
+		this.didRaise = didRaise;
+		
 		this.playersInHand = playersInHand;
 	}
 	
+
+	public Double getHandRank() {
+		return handRank;
+	}
+
+	public void setHandRank(Hand h) {
+		this.handRank = HandEvaluator.handRank(card1, card2, h, numPlayers);
+	}
+
 	public  bots.bongcloudbot.BongcloudAction  getPreliminaryAction() {
 		return preliminaryAction;
 	}
@@ -50,6 +73,16 @@ public class HandInfo {
 	}
 
 	
+	public boolean isDidRaise() {
+		return didRaise;
+	}
+
+
+	public void setDidRaise(boolean didRaise) {
+		this.didRaise = didRaise;
+	}
+
+
 	private boolean isSameSuit() {
 		return card1.getSuit() == card2.getSuit();
 	}
@@ -70,6 +103,8 @@ public class HandInfo {
 		return action;
 	}
 	public void setAction(Action action) {
+		if (action.isRaise())
+			this.didRaise = true;
 		this.action = action;
 	}
 

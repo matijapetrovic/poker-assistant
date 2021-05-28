@@ -1,0 +1,87 @@
+package rules
+
+import com.biotools.meerkat.Holdem;
+import bots.bongcloudbot.PlayerDesc.Tight;
+import bots.bongcloudbot.PlayerDesc.Aggro;
+import bots.bongcloudbot.PlayerDesc;
+import bots.bongcloudbot.HandInfo;
+import bots.bongcloudbot.BongcloudAction;
+import bots.bongcloudbot.StartingHandMatrix;
+import com.biotools.meerkat.Action;
+import com.biotools.meerkat.GameInfo;
+
+global GameInfo gameInfo;
+
+rule "Calculate hand rank"
+	when
+		$hi: HandInfo(handRank == null, gameInfo.isPostFlop() == true)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setHandRank(gameInfo.getBoard());
+		}
+end
+
+
+
+rule "Cbet if raised and no one raised"
+	when
+		$hi: HandInfo($numPlayers: numPlayers <= 3, didRaise == true, gameInfo.getNumRaises() == 0, 
+						gameInfo.getStage() == Holdem.FLOP, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.betAction(gameInfo.getTotalPotSize() * 0.5 + (0.1 * $numPlayers)));
+		}
+end
+
+
+rule "Raise if someone else cbets and no callers"
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall,
+					gameInfo.getNumRaises() == 1, gameInfo.getStage() == Holdem.FLOP, action == null)
+		Number(intValue <= 1) from accumulate(
+			PlayerDesc(
+				$t: this,
+				gameInfo.getPlayer(playerName).getAmountInPotThisRound() != 0
+			) from $playersInHand,
+			count($t)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.raiseAction($toCall, $toCall * 2));
+		}
+end
+		
+
+rule "Very strong hand and raised"
+	when
+		$hi: HandInfo($handRank: handRank >= 0.85, $toCall: toCall, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.raiseAction($toCall, $toCall * 2));
+		}
+end
+
+
+rule "Good hand and raised"
+	when
+		$hi: HandInfo($handRank: handRank > 0.75, $toCall: toCall, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
+rule "Not so good hand and raised"
+	when
+		$hi: HandInfo($handRank: handRank <= 0.75, $toCall: toCall, action == null)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.checkOrFoldAction($toCall));
+		}
+end

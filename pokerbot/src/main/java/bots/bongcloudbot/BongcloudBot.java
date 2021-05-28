@@ -28,6 +28,8 @@ public class BongcloudBot implements Player {
 	private KieContainer kContainer;
 	private KieServices ks;
 	
+	private boolean didRaise;
+	
 	
 	
 	public BongcloudBot() {
@@ -55,19 +57,21 @@ public class BongcloudBot implements Player {
 	
 	@Override
 	public Action getAction() {
+		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers(), didRaise);
+		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.insert(hi);
+		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {
-			HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers());
-			kSession.setGlobal("gameInfo", gameInfo);
-			kSession.insert(hi);
 			kSession.insert(PlayerDesc.Tight.NEUTRAL);
 			kSession.fireAllRules();
-			
+			didRaise = hi.isDidRaise();
 			kSession.delete(kSession.getFactHandle(hi));
 			return hi.getAction();
 		}
 		else {
-			
-			return Action.callAction(gameInfo);
+			kSession.fireAllRules();
+			kSession.delete(kSession.getFactHandle(hi));
+			return hi.getAction() == null ? Action.callAction(gameInfo): hi.getAction();
 		}
 	}
 
@@ -140,6 +144,7 @@ public class BongcloudBot implements Player {
 		this.card1 = card1;
 		this.card2 = card2;
 		this.seat = seat;
+		this.didRaise = false;
 	}
 
 	@Override
