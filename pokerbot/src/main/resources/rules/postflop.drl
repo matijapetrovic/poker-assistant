@@ -54,6 +54,21 @@ rule "Raise if someone else cbets and no callers"
 		}
 end
 		
+rule "Raise if no one has raised based on chance them folding"
+	when 
+		$hi: HandInfo($toCall: toCall, $potSize: potSize, gameInfo.getNumRaises() == 0, action == null);
+		Number(intValue <= 1) from accumulate(
+			PlayerDesc(
+				$t: this,
+				gameInfo.getPlayer(playerName).getAmountInPotThisRound() != 0
+			) from $playersInHand,
+			count($t)
+		)
+		
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		
+end
 
 rule "Very strong hand and raised"
 	when

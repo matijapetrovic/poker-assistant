@@ -1,6 +1,8 @@
 package bots.bongcloudbot;
 
 public class PlayerDesc {
+	private 
+	
 	public enum Aggro { 
 		PASSIVE(-1), NEUTRAL(0), AGGRESSIVE(1); 
 		private int level;

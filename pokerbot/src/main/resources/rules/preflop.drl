@@ -170,6 +170,45 @@ rule "Preliminary raise when 3+bet"
 		}
 end
 
+rule "Set hand range"
+	when 
+		$hi: HandInfo(handRange == null, action == null)
+	then 
+		modify ($hi) {
+			setHandRange();
+		}
+end
+
+rule "Set winning chance and raise price"
+	when 
+		$hi: HandInfo(winChance == null, handRange != null, action == null)
+	then 
+		modify ($hi) {
+			setWinChance();
+		}
+end
+
+rule "Set profit raise and profit call"
+	when 
+		$hi: HandInfo(profitRaise == null,  profitCall == null, handRange != null,  winChance != null, action == null)
+	then 
+		modify ($hi) {
+			setProfitRaiseAndCall();
+		}
+end
+
+rule "Preliminary raise when two raises and I raised"
+	when 
+		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() ==2, action == null,
+					 didRaise == true, $profitCall: profitCall > 0, $profitRaise: profitRaise > 0)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction($profitRaise > $profitCall ? Action.raiseAction($toCall, $toCall * 2.5) : Action.callAction($toCall));
+		}
+		
+end
+
 rule "Preliminary raise when aggressive players"
 	when
 		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall, 
