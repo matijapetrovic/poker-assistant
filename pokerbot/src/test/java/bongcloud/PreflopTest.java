@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PreflopTest {
+	private static String kSessionName = "ksession-rules";
 	KieSession kSession = null;
 	static KieContainer kieContainer;
 	private GameInfo gameInfo;
@@ -39,7 +40,7 @@ public class PreflopTest {
 	@Test
 	public void playstyleTight() {
 		KieContainer kContainer =  KnowledgeSessionHelper.createRuleBase();
-		KieSession kSession =  kContainer.newKieSession("test-rules");
+		KieSession kSession =  kContainer.newKieSession(kSessionName);
 		PlayerDesc playerDesc = new PlayerDesc("player-desc", Aggro.PASSIVE, Tight.TIGHT);
 		kSession.insert(playerDesc);
 	    int fired = kSession.fireAllRules();
@@ -50,7 +51,7 @@ public class PreflopTest {
 	
 	@Test
 	public void playstyleNeutral() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		PlayerDesc playerDesc = new PlayerDesc("player-desc", Aggro.PASSIVE, Tight.NEUTRAL);
 		kSession.insert(playerDesc);
 	    int fired = kSession.fireAllRules();
@@ -61,7 +62,7 @@ public class PreflopTest {
 	
 	@Test
 	public void playstyleLoose() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		PlayerDesc playerDesc = new PlayerDesc("player-desc", Aggro.PASSIVE, Tight.LOOSE);
 		kSession.insert(playerDesc);
 	    int fired = kSession.fireAllRules();
@@ -73,7 +74,7 @@ public class PreflopTest {
 	
 	@Test
 	public void setPreliminaryAction() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		StartingHandMatrix matrix = new StartingHandMatrix();
 		Card card1 = new Card("2c");
 		Card card2 = new Card("5c");
@@ -88,7 +89,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryFoldAndToCallIsZero() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double toCall = 0.0;
 		HandInfo hi = new HandInfo();
 		hi.setPreliminaryAction(BongcloudAction.FOLD);
@@ -103,7 +104,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryFoldAndToCallIsNotZero() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
 		hi.setPreliminaryAction(BongcloudAction.FOLD);
@@ -118,7 +119,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenFree() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
 		hi.setPreliminaryAction(BongcloudAction.CALL);
@@ -134,7 +135,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenNoRaise() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
 		hi.setPreliminaryAction(BongcloudAction.CALL);
@@ -151,7 +152,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenMoreThanOneRaise() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
 		hi.setPreliminaryAction(BongcloudAction.CALL);
@@ -168,7 +169,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenOneRaiseButTooBig() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 + 1;
 		HandInfo hi = new HandInfo();
@@ -186,7 +187,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenOnlyOneRaiseAndLooseField() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 - 1;
 		HandInfo hi = new HandInfo();
@@ -210,7 +211,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryCallWhenOnlyOneRaiseAndTighField() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 - 1;
 		HandInfo hi = new HandInfo();
@@ -235,7 +236,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryRaiseWhenNoRaises() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = 10.0;
 		HandInfo hi = new HandInfo();
@@ -253,7 +254,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryRaiseWhenOneRaiseAndToCallIsSmallerThanBigBlindSize() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 - 1;
 		HandInfo hi = new HandInfo();
@@ -271,7 +272,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryRaiseWhenOneRaiseAndToCallIsGreaterThanBigBlindSize() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 + 1;
 		HandInfo hi = new HandInfo();
@@ -289,7 +290,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryRaiseWhen3PlusBet() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 + 1;
 		HandInfo hi = new HandInfo();
@@ -307,7 +308,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryRaiseWhenAggressivePlayers() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 - 1;
 		HandInfo hi = new HandInfo();
@@ -331,7 +332,7 @@ public class PreflopTest {
 	
 	@Test
 	public void preliminaryPremium() {
-		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, "test-session");
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = 10.0;
 		HandInfo hi = new HandInfo();

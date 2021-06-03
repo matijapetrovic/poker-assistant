@@ -1,4 +1,4 @@
-package rules
+package cep
 
 import bots.bongcloudbot.PlayerDesc.Tight;
 import bots.bongcloudbot.PlayerDesc.Aggro;
