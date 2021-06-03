@@ -32,6 +32,8 @@ public class HandInfo {
 	
 	private List<PlayerDesc> playersInHand;
 	
+	public HandInfo() { }
+	
 	public HandInfo(
 			Card card1, 
 			Card card2, 
