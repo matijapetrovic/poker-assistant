@@ -1,4 +1,4 @@
-package smarterbot;
+package poker;
 
 public enum Action {
     PREMIUM(5),

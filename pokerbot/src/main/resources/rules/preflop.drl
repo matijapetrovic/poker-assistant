@@ -95,6 +95,23 @@ rule "Preliminary call when more than one raise"
 		}
 end
 
+rule "Preliminary call when only one raise and tight field"
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
+						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
+		Number(intValue >= 0) from accumulate(
+			PlayerDesc(
+				$tight: tightness.level
+			) from $playersInHand,
+			sum($tight)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
 rule "Preliminary call when only one raise but too big"
 	when
 		$hi: HandInfo($toCall: toCall > gameInfo.getBigBlindSize() * 4, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
@@ -122,22 +139,7 @@ rule "Preliminary call when only one raise and loose field"
 		}
 end
 
-rule "Preliminary call when only one raise and tight field"
-	when
-		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
-						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
-		Number(intValue >= 0) from accumulate(
-			PlayerDesc(
-				$tight: tightness.level
-			) from $playersInHand,
-			sum($tight)
-		)
-	then
-		System.out.println("Rule: " + drools.getRule().getName());
-		modify($hi) {
-			setAction(Action.callAction($toCall));
-		}
-end
+
 
 rule "Preliminary raise when no raises"
 	when

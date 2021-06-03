@@ -1,4 +1,4 @@
-package smarterbot;
+package poker;
 
 import com.biotools.meerkat.Card;
 
