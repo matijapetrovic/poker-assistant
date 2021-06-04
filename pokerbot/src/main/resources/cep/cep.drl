@@ -1,0 +1,132 @@
+package cep
+import java.util.List;
+
+import bots.bongcloudbot.PlayerDesc.Tight;
+import bots.bongcloudbot.PlayerDesc.Aggro;
+import bots.bongcloudbot.PlayerDesc;
+import bots.bongcloudbot.HandInfo;
+import bots.bongcloudbot.BongcloudAction;
+import bots.bongcloudbot.StartingHandMatrix;
+import bots.bongcloudbot.PlayerActionEvent;
+import bots.bongcloudbot.ChangeTightnessEvent;
+import com.biotools.meerkat.Action;
+import com.biotools.meerkat.GameInfo;
+
+global GameInfo gameInfo;
+
+rule "Insert Increase tightness event no previous"
+	when
+		$event1: PlayerActionEvent($playerName: name)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isFold() == true
+			) from $events,
+			count($t)
+		)
+		not(ChangeTightnessEvent(name == $playerName, change == 1))
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, 1, $events));
+end
+
+rule "Insert Increase tightness event when previous"
+	when
+		$event1: PlayerActionEvent($playerName: name)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isFold() == true
+			) from $events,
+			count($t)
+		)
+		ChangeTightnessEvent(name == $playerName, change == 1, $prevEvents: events)
+		Number(intValue == 0) from accumulate(
+			PlayerActionEvent(
+				$t1: this memberOf $prevEvents
+			) from $events,
+			count($t1)
+		)
+		
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, 1, $events));
+end
+
+rule "Insert Decrease tightness event no previous"
+	when
+		$event1: PlayerActionEvent($playerName: name)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isCall() == true
+			) from $events,
+			count($t)
+		)
+		not(ChangeTightnessEvent(name == $playerName, change == -1))
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, -1, $events));
+end
+
+rule "Insert Decrase tightness event when previous"
+	when
+		$event1: PlayerActionEvent($playerName: name)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isCall() == true
+			) from $events,
+			count($t)
+		)
+		ChangeTightnessEvent(name == $playerName, change == -1, $prevEvents: events)
+		Number(intValue == 0) from accumulate(
+			PlayerActionEvent(
+				$t1: this memberOf $prevEvents
+			) from $events,
+			count($t1)
+		)
+		
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, -1, $events));
+end
+
+rule "Update tightness"
+	when
+		$e: ChangeTightnessEvent($playerName: name, $change: change, changed == false)
+		$desc: PlayerDesc(playerName == $playerName)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($desc) {
+			updateTightness($change);
+		}
+		modify($e) {
+			setChanged(true);
+		}
+
+end

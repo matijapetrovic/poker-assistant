@@ -1,8 +1,10 @@
 package bots.bongcloudbot;
 
+import org.kie.api.definition.type.Role;
+
 import com.biotools.meerkat.Action;
 
-
+@Role(Role.Type.EVENT)
 public class PlayerActionEvent {
 	private String name;
 	private Action action;

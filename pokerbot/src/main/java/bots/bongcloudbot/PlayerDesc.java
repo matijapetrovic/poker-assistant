@@ -58,6 +58,12 @@ public class PlayerDesc {
 	public void setTightness(Tight tightness) {
 		this.tightness = tightness;
 	}
+	public void updateTightness(int change) {
+		int level = this.tightness.level + change;
+		level = Math.max(level, -1);
+		level = Math.min(level, 1);
+		this.tightness = Tight.values()[level + 1];
+	}
 
 	public String getPlayerName() {
 		return playerName;

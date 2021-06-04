@@ -1,0 +1,43 @@
+package rules
+
+import bots.bongcloudbot.PlayerDesc.Tight;
+import bots.bongcloudbot.PlayerDesc.Aggro;
+import bots.bongcloudbot.PlayerDesc;
+import bots.bongcloudbot.HandInfo;
+import bots.bongcloudbot.BongcloudAction;
+import bots.bongcloudbot.StartingHandMatrix;
+import com.biotools.meerkat.Action;
+import com.biotools.meerkat.GameInfo;
+
+global GameInfo gameInfo;
+
+
+query preFlop()
+    eval(gameInfo.isPreFlop())
+end
+
+
+query lowBankroll(HandInfo hi)
+    eval(gameInfo.getBankRoll(hi.getSeat()) <= 0.5)
+end
+
+query hasStrongHand(HandInfo hi)
+    eval(hi.getPreliminaryAction().getValue() >= 3)
+end
+
+query isItTimeForAllIn(HandInfo hi)
+    preFlop() and lowBankroll(hi;) and hasStrongHand(hi;)
+end
+
+
+
+rule "Go All In"
+    when
+        $hi: HandInfo()
+        isItTimeForAllIn($hi;)
+    then
+        System.out.println("Rule: " + drools.getRule().getName());
+        modify($ps) {
+            setAction(Action.raiseAction(gameInfo, gameInfo.getBankRoll($ps.getSeat())))
+        }
+end

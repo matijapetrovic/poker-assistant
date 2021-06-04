@@ -21,22 +21,24 @@ public class BongcloudBot implements Player {
 	private int seat;
 	private Preferences preferences;
 	private GameInfo gameInfo;
+	private int eventCount;
 
 	private PlayerStats playerStats;
 	
-	private KieSession kSession;
+	private KieSession rulesSession;
+	private KieSession cepSession;
 	private KieContainer kContainer;
 	private KieServices ks;
 	
 	private boolean didRaise;
 	
-	
-	
 	public BongcloudBot() {
 		ks = KieServices.Factory.get();
 		kContainer = ks.getKieClasspathContainer();
-		kSession = kContainer.newKieSession("ksession-rules");
+		cepSession = kContainer.newKieSession("ksession-cep");
+		rulesSession = kContainer.newKieSession("ksession-rules");
 		playerStats = new PlayerStats();
+		eventCount = 0;
 	}
 	
 	public Action preFlopAction() {
@@ -58,19 +60,19 @@ public class BongcloudBot implements Player {
 	@Override
 	public Action getAction() {
 		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers(), didRaise);
-		kSession.setGlobal("gameInfo", gameInfo);
-		kSession.insert(hi);
+		rulesSession.setGlobal("gameInfo", gameInfo);
+		rulesSession.insert(hi);
 		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {
-			kSession.insert(PlayerDesc.Tight.NEUTRAL);
-			kSession.fireAllRules();
+			rulesSession.insert(PlayerDesc.Tight.NEUTRAL);
+			rulesSession.fireAllRules();
 			didRaise = hi.isDidRaise();
-			kSession.delete(kSession.getFactHandle(hi));
+			rulesSession.delete(rulesSession.getFactHandle(hi));
 			return hi.getAction();
 		}
 		else {
-			kSession.fireAllRules();
-			kSession.delete(kSession.getFactHandle(hi));
+			rulesSession.fireAllRules();
+			rulesSession.delete(rulesSession.getFactHandle(hi));
 			return hi.getAction() == null ? Action.callAction(gameInfo): hi.getAction();
 		}
 	}
@@ -116,11 +118,11 @@ public class BongcloudBot implements Player {
 	}
 
 	public KieSession getkSession() {
-		return kSession;
+		return rulesSession;
 	}
 
 	public void setkSession(KieSession kSession) {
-		this.kSession = kSession;
+		this.rulesSession = kSession;
 	}
 
 	public KieContainer getkContainer() {
@@ -169,7 +171,9 @@ public class BongcloudBot implements Player {
 		PlayerInfo pi = gameInfo.getPlayer(seat);
 		String name = pi.getName();
 		// create event for player
-		this.kSession.insert(new PlayerActionEvent(name, action));
+		eventCount += 1;
+		System.out.println("ACTION EVENT" + eventCount);
+		this.cepSession.insert(new PlayerActionEvent(name, action));
 	}
 
 	@Override
