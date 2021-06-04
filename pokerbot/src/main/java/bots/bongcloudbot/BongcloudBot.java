@@ -170,9 +170,6 @@ public class BongcloudBot implements Player {
 	public void actionEvent(int seat, Action action) {
 		PlayerInfo pi = gameInfo.getPlayer(seat);
 		String name = pi.getName();
-		// create event for player
-		eventCount += 1;
-		System.out.println("ACTION EVENT" + eventCount);
 		this.cepSession.insert(new PlayerActionEvent(name, action));
 	}
 

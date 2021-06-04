@@ -37,7 +37,7 @@ rule "Go All In"
         isItTimeForAllIn($hi;)
     then
         System.out.println("Rule: " + drools.getRule().getName());
-        modify($ps) {
-            setAction(Action.raiseAction(gameInfo, gameInfo.getBankRoll($ps.getSeat())))
+        modify($hi) {
+            setAction(Action.raiseAction(gameInfo, gameInfo.getBankRoll($hi.getSeat())))
         }
 end
