@@ -12,6 +12,7 @@ import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
 
+
 rule "Increase tightness event"
 	when
 		$event1: PlayerActionEvent($playerName: name, action == Action.FOLD)
