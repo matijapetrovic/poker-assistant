@@ -21,22 +21,24 @@ public class BongcloudBot implements Player {
 	private int seat;
 	private Preferences preferences;
 	private GameInfo gameInfo;
+	private int eventCount;
 
 	private PlayerStats playerStats;
 	
-	private KieSession kSession;
+	private KieSession rulesSession;
+	private KieSession cepSession;
 	private KieContainer kContainer;
 	private KieServices ks;
 	
 	private boolean didRaise;
 	
-	
-	
 	public BongcloudBot() {
 		ks = KieServices.Factory.get();
 		kContainer = ks.getKieClasspathContainer();
-		kSession = kContainer.newKieSession("ksession-rules");
+		cepSession = kContainer.newKieSession("ksession-cep");
+		rulesSession = kContainer.newKieSession("ksession-rules");
 		playerStats = new PlayerStats();
+		eventCount = 0;
 	}
 	
 	public Action preFlopAction() {
@@ -63,15 +65,15 @@ public class BongcloudBot implements Player {
 		kSession.insert(hi);
 		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {
-			kSession.insert(PlayerDesc.Tight.NEUTRAL);
-			kSession.fireAllRules();
+			rulesSession.insert(PlayerDesc.Tight.NEUTRAL);
+			rulesSession.fireAllRules();
 			didRaise = hi.isDidRaise();
-			kSession.delete(kSession.getFactHandle(hi));
+			rulesSession.delete(rulesSession.getFactHandle(hi));
 			return hi.getAction();
 		}
 		else {
-			kSession.fireAllRules();
-			kSession.delete(kSession.getFactHandle(hi));
+			rulesSession.fireAllRules();
+			rulesSession.delete(rulesSession.getFactHandle(hi));
 			return hi.getAction() == null ? Action.callAction(gameInfo): hi.getAction();
 		}
 	}
@@ -117,11 +119,11 @@ public class BongcloudBot implements Player {
 	}
 
 	public KieSession getkSession() {
-		return kSession;
+		return rulesSession;
 	}
 
 	public void setkSession(KieSession kSession) {
-		this.kSession = kSession;
+		this.rulesSession = kSession;
 	}
 
 	public KieContainer getkContainer() {
@@ -167,10 +169,10 @@ public class BongcloudBot implements Player {
 	
 	@Override
 	public void actionEvent(int seat, Action action) {
+		if (seat == this.seat) return;
 		PlayerInfo pi = gameInfo.getPlayer(seat);
 		String name = pi.getName();
-		// create event for player
-		this.kSession.insert(new PlayerActionEvent(name, action));
+		this.cepSession.insert(new PlayerActionEvent(name, action, gameInfo.isPreFlop()));
 	}
 
 	@Override

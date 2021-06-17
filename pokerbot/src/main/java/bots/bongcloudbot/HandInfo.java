@@ -26,6 +26,7 @@ public class HandInfo {
 	private double potSize;		 // amount of money in game
 	private double bankRoll;     // amount of money I have
 	private Integer IR;
+	private int seat;
 
 	private Double handRank;
 	private boolean didRaise;
@@ -50,7 +51,7 @@ public class HandInfo {
 		potSize = gameInfo.getTotalPotSize();
 		bankRoll = gameInfo.getBankRoll(seat);
 		sameSuit = isSameSuit();
-		
+		this.seat = seat;
 		handRank = null;
 		this.didRaise = didRaise;
 		
@@ -179,6 +180,18 @@ public class HandInfo {
 
 	public void setPlayersInHand(List<PlayerDesc> playersInHand) {
 		this.playersInHand = playersInHand;
+	}
+
+	public int getSeat() {
+		return seat;
+	}
+
+	public void setSeat(int seat) {
+		this.seat = seat;
+	}
+
+	public void setHandRank(Double handRank) {
+		this.handRank = handRank;
 	}
 
 	

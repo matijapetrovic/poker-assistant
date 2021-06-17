@@ -1,8 +1,5 @@
 package bongcloud;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.Listener;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
