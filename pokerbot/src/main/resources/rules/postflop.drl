@@ -11,7 +11,7 @@ import com.biotools.meerkat.Action;
 import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
-global int phase;
+global Integer phase;
 
 rule "Calculate hand rank"
 	salience phase*100

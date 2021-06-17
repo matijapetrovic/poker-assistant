@@ -60,6 +60,7 @@ public class PreflopTest {
 	@Test
 	public void playstyleTight() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.insert(PlayerDesc.Tight.TIGHT);
 	    int fired = kSession.fireAllRules();
 	        
@@ -69,6 +70,7 @@ public class PreflopTest {
 	@Test
 	public void playstyleNeutral() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.insert(PlayerDesc.Tight.NEUTRAL);
 	    int fired = kSession.fireAllRules();
 	    
@@ -78,6 +80,7 @@ public class PreflopTest {
 	@Test
 	public void playstyleLoose() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.insert(PlayerDesc.Tight.LOOSE);
 	    int fired = kSession.fireAllRules();
 	    
@@ -87,6 +90,7 @@ public class PreflopTest {
 //	@Test
 //	public void setPreliminaryAction() {
 //		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+//		kSession.setGlobal("phase", 1);
 //		kSession.setGlobal("gameInfo", gameInfo);
 //		HandInfo hi = new HandInfo();
 //		hi.setCard1(card1);
@@ -103,6 +107,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryFoldAndToCallIsZero() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double toCall = 0.0;
 		HandInfo hi = new HandInfo();
@@ -120,6 +125,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryFoldAndToCallIsNotZero() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
@@ -136,6 +142,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryCallWhenFree() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double toCall = 0.0;
 		HandInfo hi = new HandInfo();
@@ -152,6 +159,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryCallWhenNoRaise() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double toCall = 1.0;
 		HandInfo hi = new HandInfo();
@@ -169,6 +177,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryCallWhenMoreThanOneRaise() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(5);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double toCall = 1.0;
@@ -186,6 +195,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryCallWhenOneRaiseButTooBig() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double bigBLindSize = gameInfo.getBigBlindSize();
@@ -207,6 +217,7 @@ public class PreflopTest {
 	@Test
 	public void preliminaryCallWhenOnlyOneRaiseAndLooseField() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		kSession.setGlobal("gameInfo", gameInfo);
 		double bigBLindSize = gameInfo.getBigBlindSize();
@@ -234,6 +245,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 - 1;
 		HandInfo hi = new HandInfo();
@@ -260,6 +272,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(0);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = 10.0;
 		HandInfo hi = new HandInfo();
@@ -279,6 +292,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 - 1;
 		HandInfo hi = new HandInfo();
@@ -298,6 +312,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 + 1;
 		HandInfo hi = new HandInfo();
@@ -317,6 +332,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(5);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 5 + 1;
 		HandInfo hi = new HandInfo();
@@ -336,6 +352,7 @@ public class PreflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(2);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = bigBLindSize * 4 - 1;
 		HandInfo hi = new HandInfo();
@@ -359,6 +376,7 @@ public class PreflopTest {
 	public void preliminaryPremium() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double bigBLindSize = gameInfo.getBigBlindSize();
 		double toCall = 10.0;
 		HandInfo hi = new HandInfo();

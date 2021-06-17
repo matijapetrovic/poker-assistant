@@ -55,6 +55,7 @@ public class PostflopTest {
 //		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 //		Mockito.when(gameInfo.isPostFlop()).thenReturn(false);
 //		kSession.setGlobal("gameInfo", gameInfo);
+//		kSession.setGlobal("phase", 1);
 //		HandInfo hi = new HandInfo();
 //		
 //		kSession.insert(hi);
@@ -72,6 +73,7 @@ public class PostflopTest {
 		Mockito.when(gameInfo.getStage()).thenReturn(Holdem.FLOP);
 		Mockito.when(gameInfo.getTotalPotSize()).thenReturn(20.0);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		HandInfo hi = new HandInfo();
 		hi.setNumPlayers(2);
 		hi.setDidRaise(true);
@@ -90,6 +92,7 @@ public class PostflopTest {
 		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
 		Mockito.when(gameInfo.getStage()).thenReturn(Holdem.FLOP);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double toCall = 10.0;
 		HandInfo hi = new HandInfo();
 		List<PlayerDesc> playersHand = new ArrayList<>(Arrays.asList());
@@ -113,6 +116,7 @@ public class PostflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		HandInfo hi = new HandInfo();
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double toCall = 10.0;
 		hi.setToCall(toCall);
 		hi.setHandRank(0.9);
@@ -130,6 +134,7 @@ public class PostflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		HandInfo hi = new HandInfo();
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double toCall = 10.0;
 		hi.setToCall(toCall);
 		hi.setHandRank(0.80);
@@ -147,6 +152,7 @@ public class PostflopTest {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
 		HandInfo hi = new HandInfo();
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		double toCall = 10.0;
 		hi.setToCall(toCall);
 		hi.setHandRank(0.7);

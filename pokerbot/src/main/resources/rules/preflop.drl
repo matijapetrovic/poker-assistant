@@ -10,10 +10,10 @@ import com.biotools.meerkat.Action;
 import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
-global int phase;
+global Integer phase;
 
 rule "Playstyle TIGHT"
-	salience phase*100
+	salience 100*phase
 	when
 		$tightness: Tight(level == 1)
 	then
