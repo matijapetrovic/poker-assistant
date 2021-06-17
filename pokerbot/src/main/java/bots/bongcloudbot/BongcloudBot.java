@@ -168,9 +168,10 @@ public class BongcloudBot implements Player {
 	
 	@Override
 	public void actionEvent(int seat, Action action) {
+		if (seat == this.seat) return;
 		PlayerInfo pi = gameInfo.getPlayer(seat);
 		String name = pi.getName();
-		this.cepSession.insert(new PlayerActionEvent(name, action));
+		this.cepSession.insert(new PlayerActionEvent(name, action, gameInfo.isPreFlop()));
 	}
 
 	@Override

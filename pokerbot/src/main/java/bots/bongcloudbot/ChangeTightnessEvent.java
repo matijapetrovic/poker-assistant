@@ -50,6 +50,11 @@ public class ChangeTightnessEvent {
 		this.changed = changed;
 	}
 	
-	
+	public boolean intersect(List<PlayerActionEvent> events) {
+		for (PlayerActionEvent event: events) {
+			if (this.events.contains(event)) return true;
+		}
+		return false;
+	}
 	
 }

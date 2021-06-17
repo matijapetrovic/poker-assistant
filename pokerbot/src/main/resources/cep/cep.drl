@@ -9,17 +9,20 @@ import bots.bongcloudbot.BongcloudAction;
 import bots.bongcloudbot.StartingHandMatrix;
 import bots.bongcloudbot.PlayerActionEvent;
 import bots.bongcloudbot.ChangeTightnessEvent;
+import bots.bongcloudbot.ChangeAggressivenessEvent;
 import com.biotools.meerkat.Action;
 import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
 
-rule "Insert Increase tightness event no previous"
+rule "Insert Increase tightness event when no previous"
+	salience 3
 	when
-		$event1: PlayerActionEvent($playerName: name)
+		$event1: PlayerActionEvent($playerName: name, preFlop == true)
 		$events: List(size > 0) from accumulate(
 			$event2: PlayerActionEvent(
-				name == $playerName
+				name == $playerName,
+				preFlop == true
 			) over window:length(5),
 			collectList($event2)
 		)
@@ -30,93 +33,110 @@ rule "Insert Increase tightness event no previous"
 			) from $events,
 			count($t)
 		)
-		not(ChangeTightnessEvent(name == $playerName, change == 1))
-	then
-		System.out.println("Rule: " + drools.getRule().getName());
-		insert(new ChangeTightnessEvent($playerName, 1, $events));
-end
-
-rule "Insert Increase tightness event when previous"
-	when
-		$event1: PlayerActionEvent($playerName: name)
-		$events: List(size > 0) from accumulate(
-			$event2: PlayerActionEvent(
-				name == $playerName
-			) over window:length(5),
-			collectList($event2)
+		not(
+			ChangeTightnessEvent(
+				name == $playerName,
+				change == 1,
+				intersect($events) == true
+			)
 		)
-		Number(intValue == 5) from accumulate(
-			PlayerActionEvent(
-				$t: this,
-				action.isFold() == true
-			) from $events,
-			count($t)
-		)
-		ChangeTightnessEvent(name == $playerName, change == 1, $prevEvents: events)
-		Number(intValue == 0) from accumulate(
-			PlayerActionEvent(
-				$t1: this memberOf $prevEvents
-			) from $events,
-			count($t1)
-		)
-		
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
 		insert(new ChangeTightnessEvent($playerName, 1, $events));
 end
 
 rule "Insert Decrease tightness event no previous"
+	salience 3
 	when
-		$event1: PlayerActionEvent($playerName: name)
+		$event1: PlayerActionEvent($playerName: name, preFlop == true)
 		$events: List(size > 0) from accumulate(
 			$event2: PlayerActionEvent(
-				name == $playerName
+				name == $playerName,
+				preFlop == true
 			) over window:length(5),
 			collectList($event2)
 		)
 		Number(intValue == 5) from accumulate(
 			PlayerActionEvent(
 				$t: this,
-				action.isCall() == true
+				action.isCheckOrCall() == true
 			) from $events,
 			count($t)
 		)
-		not(ChangeTightnessEvent(name == $playerName, change == -1))
+		not(
+			ChangeTightnessEvent(
+				name == $playerName,
+				change == -1,
+				intersect($events) == true
+			)
+		)
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
 		insert(new ChangeTightnessEvent($playerName, -1, $events));
 end
 
-rule "Insert Decrase tightness event when previous"
+rule "Insert Increase aggressiveness event no previous"
+	salience 3
 	when
-		$event1: PlayerActionEvent($playerName: name)
+		$event1: PlayerActionEvent($playerName: name, preFlop == false)
 		$events: List(size > 0) from accumulate(
 			$event2: PlayerActionEvent(
-				name == $playerName
+				name == $playerName,
+				preFlop == false
 			) over window:length(5),
 			collectList($event2)
 		)
 		Number(intValue == 5) from accumulate(
 			PlayerActionEvent(
 				$t: this,
-				action.isCall() == true
+				action.isBetOrRaise() == true
 			) from $events,
 			count($t)
 		)
-		ChangeTightnessEvent(name == $playerName, change == -1, $prevEvents: events)
-		Number(intValue == 0) from accumulate(
-			PlayerActionEvent(
-				$t1: this memberOf $prevEvents
-			) from $events,
-			count($t1)
+		not(
+			ChangeAggressivenessEvent(
+				name == $playerName,
+				change == 1,
+				intersect($events) == true
+			)
 		)
-		
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
-		insert(new ChangeTightnessEvent($playerName, -1, $events));
+		insert(new ChangeAggressivenessEvent($playerName, 1, $events));
+end
+
+rule "Insert Decrease aggressiveness event no previous"
+	salience 3
+	when
+		$event1: PlayerActionEvent($playerName: name, preFlop == false)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName,
+				preFlop == false
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isCheckOrCall() == true
+			) from $events,
+			count($t)
+		)
+		not(
+			ChangeAggressivenessEvent(
+				name == $playerName,
+				change == -1,
+				intersect($events) == true
+			)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeAggressivenessEvent($playerName, -1, $events));
 end
 
 rule "Update tightness"
+salience 2
 	when
 		$e: ChangeTightnessEvent($playerName: name, $change: change, changed == false)
 		$desc: PlayerDesc(playerName == $playerName)
@@ -124,6 +144,22 @@ rule "Update tightness"
 		System.out.println("Rule: " + drools.getRule().getName());
 		modify($desc) {
 			updateTightness($change);
+		}
+		modify($e) {
+			setChanged(true);
+		}
+
+end
+
+rule "Update aggressiveness"
+salience 2
+	when
+		$e: ChangeAggressivenessEvent($playerName: name, $change: change, changed == false)
+		$desc: PlayerDesc(playerName == $playerName)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($desc) {
+			updateAggressiveness($change);
 		}
 		modify($e) {
 			setChanged(true);
