@@ -10,8 +10,10 @@ import com.biotools.meerkat.Action;
 import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
+global int phase;
 
 rule "Playstyle TIGHT"
+	salience phase*100
 	when
 		$tightness: Tight(level == 1)
 	then
@@ -22,7 +24,8 @@ rule "Playstyle TIGHT"
 end
 
 rule "Playstyle NEUTRAL"
-when
+	salience phase*100
+	when
 		$tightness: Tight(level == 0)
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
@@ -33,7 +36,8 @@ end
 
 
 rule "Playstyle LOOSE"
-when
+	salience phase*100
+	when
 		$tightness: Tight(level == -1)
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
@@ -43,6 +47,7 @@ when
 end
 
 rule "Set preliminary action"
+	salience phase*50
     when
     	$matrix: StartingHandMatrix()
         $hi: HandInfo($card1: card1, $card2: card2, preliminaryAction == null)
@@ -55,6 +60,7 @@ rule "Set preliminary action"
 end
 
 rule "Preliminary fold"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.FOLD, action == null)
 	then
@@ -66,6 +72,7 @@ end
 
 
 rule "Preliminary call when free"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall == 0, preliminaryAction == BongcloudAction.CALL, action == null)
 	then
@@ -76,6 +83,7 @@ rule "Preliminary call when free"
 end
 
 rule "Preliminary call when no raise"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 0, action == null)
 	then
@@ -86,6 +94,7 @@ rule "Preliminary call when no raise"
 end
 
 rule "Preliminary call when more than one raise"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() > 1, action == null)
 	then
@@ -96,6 +105,7 @@ rule "Preliminary call when more than one raise"
 end
 
 rule "Preliminary call when only one raise and tight field"
+	salience phase*25
 	when
 		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
 						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
@@ -113,6 +123,7 @@ rule "Preliminary call when only one raise and tight field"
 end
 
 rule "Preliminary call when only one raise but too big"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall > gameInfo.getBigBlindSize() * 4, preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
 	then
@@ -123,6 +134,7 @@ rule "Preliminary call when only one raise but too big"
 end
 
 rule "Preliminary call when only one raise and loose field"
+	salience phase*25
 	when
 		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall < gameInfo.getBigBlindSize() * 4, 
 						preliminaryAction == BongcloudAction.CALL, gameInfo.getNumRaises() == 1, action == null)
@@ -142,10 +154,11 @@ end
 
 
 rule "Preliminary raise when no raises"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 0, action == null)
 	then
-		System.out.println("Rule: " + drools.getRule().getName());
+		System.out.println("Rule: "+ drools.getRule().getName());
 		modify($hi) {
 			setAction(Action.raiseAction($toCall, gameInfo.getBigBlindSize() * 4));
 		}
@@ -153,6 +166,7 @@ end
 
 
 rule "Preliminary raise when one raise"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 1, action == null)
 	then
@@ -163,6 +177,7 @@ rule "Preliminary raise when one raise"
 end
 
 rule "Preliminary raise when 3+bet"
+	salience phase*25
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() >=3, action == null)
 	then
@@ -173,6 +188,7 @@ rule "Preliminary raise when 3+bet"
 end
 
 rule "Preliminary raise when aggressive players"
+	salience phase*25
 	when
 		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall, 
 						preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 2,
@@ -192,7 +208,7 @@ end
 
 
 rule "Preliminary premium"
-
+	salience phase*20
 	when
 		$hi: HandInfo($toCall: toCall, preliminaryAction == BongcloudAction.PREMIUM, action == null)
 	then

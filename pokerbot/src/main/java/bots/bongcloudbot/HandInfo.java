@@ -65,6 +65,10 @@ public class HandInfo {
 	public void setHandRank(Hand h) {
 		this.handRank = HandEvaluator.handRank(card1, card2, h, numPlayers);
 	}
+	
+	public void setHandRank(double rank) {
+		this.handRank = rank;
+	}
 
 	public  bots.bongcloudbot.BongcloudAction  getPreliminaryAction() {
 		return preliminaryAction;

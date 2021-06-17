@@ -11,8 +11,10 @@ import com.biotools.meerkat.Action;
 import com.biotools.meerkat.GameInfo;
 
 global GameInfo gameInfo;
+global int phase;
 
 rule "Calculate hand rank"
+	salience phase*100
 	when
 		$hi: HandInfo(handRank == null, gameInfo.isPostFlop() == true)
 	then
@@ -25,6 +27,7 @@ end
 
 
 rule "Cbet if raised and no one raised"
+	salience phase*50
 	when
 		$hi: HandInfo($numPlayers: numPlayers <= 3, didRaise == true, gameInfo.getNumRaises() == 0, 
 						gameInfo.getStage() == Holdem.FLOP, action == null)
@@ -37,6 +40,7 @@ end
 
 
 rule "Raise if someone else cbets and no callers"
+	salience phase*50
 	when
 		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall,
 					gameInfo.getNumRaises() == 1, gameInfo.getStage() == Holdem.FLOP, action == null)
@@ -56,6 +60,7 @@ end
 		
 
 rule "Very strong hand and raised"
+	salience phase*50
 	when
 		$hi: HandInfo($handRank: handRank >= 0.85, $toCall: toCall, action == null)
 	then
@@ -67,8 +72,9 @@ end
 
 
 rule "Good hand and raised"
+	salience phase*50
 	when
-		$hi: HandInfo($handRank: handRank > 0.75, $toCall: toCall, action == null)
+		$hi: HandInfo($handRank: handRank > 0.75, handRank < 0.85, $toCall: toCall, action == null)
 	then
 		System.out.println("Rule: " + drools.getRule().getName());
 		modify($hi) {
@@ -77,6 +83,7 @@ rule "Good hand and raised"
 end
 
 rule "Not so good hand and raised"
+	salience phase*50
 	when
 		$hi: HandInfo($handRank: handRank <= 0.75, $toCall: toCall, action == null)
 	then

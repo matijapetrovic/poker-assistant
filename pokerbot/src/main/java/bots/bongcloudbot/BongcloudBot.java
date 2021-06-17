@@ -59,6 +59,7 @@ public class BongcloudBot implements Player {
 	public Action getAction() {
 		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers(), didRaise);
 		kSession.setGlobal("gameInfo", gameInfo);
+		kSession.setGlobal("phase", 1);
 		kSession.insert(hi);
 		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {

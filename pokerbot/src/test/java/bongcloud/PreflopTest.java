@@ -87,7 +87,6 @@ public class PreflopTest {
         assertThat(1, is(fired));
 	}
 	
-	
 //	@Test
 //	public void setPreliminaryAction() {
 //		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
@@ -96,13 +95,14 @@ public class PreflopTest {
 //		hi.setCard1(card1);
 //		hi.setCard2(card2);
 //		
+//		kSession.insert(new StartingHandMatrix());
 //		kSession.insert(hi);
 //	    int fired = kSession.fireAllRules();
 //	    
 //        assertThat(1, is(fired));
-//        assertNotNull(hi.getPreliminaryAction());
+//        //assertNotNull(hi.getPreliminaryAction());
 //	}
-	
+//	
 	@Test
 	public void preliminaryFoldAndToCallIsZero() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
@@ -117,7 +117,7 @@ public class PreflopTest {
 	    kSession.delete(kSession.getFactHandle(hi));
 		
 	    assertThat(1, is(fired));
-	    //assertThat(hi.getAction(), is(Action.callAction(toCall)));
+	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
 	@Test
@@ -133,7 +133,7 @@ public class PreflopTest {
 	    int fired = kSession.fireAllRules();
 		
 	    assertThat(1, is(fired));
-	    //assertThat(hi.getAction(), is(Action.callAction(toCall)));
+	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
 	@Test
@@ -183,10 +183,8 @@ public class PreflopTest {
 	    int fired = kSession.fireAllRules();
 		
 	    assertThat(1, is(fired));
-	    //assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
+	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
-	
-	//"Preliminary call when only one raise and tight field
 	
 	@Test
 	public void preliminaryCallWhenOneRaiseButTooBig() {
@@ -209,158 +207,172 @@ public class PreflopTest {
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
-//	@Test
-//	public void preliminaryCallWhenOnlyOneRaiseAndLooseField() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 4 - 1;
-//		HandInfo hi = new HandInfo();
-//		List<PlayerDesc> playersHand = new ArrayList<>(
-//				Arrays.asList(
-//						new PlayerDesc("player-desc1", Aggro.PASSIVE, Tight.LOOSE),
-//						new PlayerDesc("player-desc2", Aggro.PASSIVE, Tight.LOOSE),
-//						new PlayerDesc("player-desc3", Aggro.PASSIVE, Tight.LOOSE)));
-//		hi.setPreliminaryAction(BongcloudAction.CALL);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(1);
-//		hi.setPlayersInHand(playersHand);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, bigBLindSize * 2.5)));
-//	}
-//	
-//	@Test
-//	public void preliminaryCallWhenOnlyOneRaiseAndTighField() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 4 - 1;
-//		HandInfo hi = new HandInfo();
-//		List<PlayerDesc> playersHand = new ArrayList<>(
-//				Arrays.asList(
-//						new PlayerDesc("player-desc1", Aggro.PASSIVE, Tight.TIGHT),
-//						new PlayerDesc("player-desc2", Aggro.PASSIVE, Tight.TIGHT),
-//						new PlayerDesc("player-desc3", Aggro.PASSIVE, Tight.TIGHT)));
-//		hi.setPreliminaryAction(BongcloudAction.CALL);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(1);
-//		hi.setPlayersInHand(playersHand);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.callAction(toCall)));
-//	}
-//	
-//	
-//	@Test
-//	public void preliminaryRaiseWhenNoRaises() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = 10.0;
-//		HandInfo hi = new HandInfo();
-//		hi.setPreliminaryAction(BongcloudAction.RAISE);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(0);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, bigBLindSize * 4)));
-//	}
-//	
-//	@Test
-//	public void preliminaryRaiseWhenOneRaiseAndToCallIsSmallerThanBigBlindSize() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 5 - 1;
-//		HandInfo hi = new HandInfo();
-//		hi.setPreliminaryAction(BongcloudAction.RAISE);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(1);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, bigBLindSize * 4)));
-//	}
-//	
-//	@Test
-//	public void preliminaryRaiseWhenOneRaiseAndToCallIsGreaterThanBigBlindSize() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 5 + 1;
-//		HandInfo hi = new HandInfo();
-//		hi.setPreliminaryAction(BongcloudAction.RAISE);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(1);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, bigBLindSize * 4)));
-//	}
-//	
-//	@Test
-//	public void preliminaryRaiseWhen3PlusBet() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 5 + 1;
-//		HandInfo hi = new HandInfo();
-//		hi.setPreliminaryAction(BongcloudAction.RAISE);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(3);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.foldAction(toCall)));
-//	}
-//	
-//	@Test
-//	public void preliminaryRaiseWhenAggressivePlayers() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = bigBLindSize * 4 - 1;
-//		HandInfo hi = new HandInfo();
-//		List<PlayerDesc> playersHand = new ArrayList<>(
-//				Arrays.asList(
-//						new PlayerDesc("player-desc1", Aggro.AGGRESSIVE, Tight.TIGHT),
-//						new PlayerDesc("player-desc2", Aggro.AGGRESSIVE, Tight.TIGHT),
-//						new PlayerDesc("player-desc3", Aggro.AGGRESSIVE, Tight.TIGHT)));
-//		hi.setPreliminaryAction(BongcloudAction.CALL);
-//		hi.setToCall(toCall);
-//		hi.setNumOfRaises(2);
-//		hi.setPlayersInHand(playersHand);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//		
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, toCall * 2)));
-//	}
-//	
-//	@Test
-//	public void preliminaryPremium() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		double bigBLindSize = gameInfo.getBigBlindSize();
-//		double toCall = 10.0;
-//		HandInfo hi = new HandInfo();
-//		hi.setPreliminaryAction(BongcloudAction.PREMIUM);
-//		hi.setToCall(toCall);
-//		
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//	    kSession.delete(kSession.getFactHandle(hi));
-//	    
-//	    assertThat(1, is(fired));
-//	    assertThat(hi.getAction(), is(Action.raiseAction(toCall, bigBLindSize * 2)));
-//	}
+	@Test
+	public void preliminaryCallWhenOnlyOneRaiseAndLooseField() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 4 - 1;
+		HandInfo hi = new HandInfo();
+		List<PlayerDesc> playersHand = new ArrayList<>(
+				Arrays.asList(
+						new PlayerDesc("player-desc1", Aggro.PASSIVE, Tight.LOOSE),
+						new PlayerDesc("player-desc2", Aggro.PASSIVE, Tight.LOOSE),
+						new PlayerDesc("player-desc3", Aggro.PASSIVE, Tight.LOOSE)));
+		hi.setPreliminaryAction(BongcloudAction.CALL);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(1);
+		hi.setPlayersInHand(playersHand);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 2.5).toString());
+	}
+	
+	@Test
+	public void preliminaryCallWhenOnlyOneRaiseAndTighField() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 4 - 1;
+		HandInfo hi = new HandInfo();
+		List<PlayerDesc> playersHand = new ArrayList<>(
+				Arrays.asList(
+						new PlayerDesc("player-desc1", Aggro.PASSIVE, Tight.TIGHT),
+						new PlayerDesc("player-desc2", Aggro.PASSIVE, Tight.TIGHT),
+						new PlayerDesc("player-desc3", Aggro.PASSIVE, Tight.TIGHT)));
+		hi.setPreliminaryAction(BongcloudAction.CALL);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(1);
+		hi.setPlayersInHand(playersHand);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
+	}
+	
+	
+	@Test
+	public void preliminaryRaiseWhenNoRaises() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(0);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = 10.0;
+		HandInfo hi = new HandInfo();
+		hi.setPreliminaryAction(BongcloudAction.RAISE);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(0);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 4).toString());
+	}
+	
+	@Test
+	public void preliminaryRaiseWhenOneRaiseAndToCallIsSmallerThanBigBlindSize() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 5 - 1;
+		HandInfo hi = new HandInfo();
+		hi.setPreliminaryAction(BongcloudAction.RAISE);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(1);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
+	}
+	
+	@Test
+	public void preliminaryRaiseWhenOneRaiseAndToCallIsGreaterThanBigBlindSize() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(1);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 5 + 1;
+		HandInfo hi = new HandInfo();
+		hi.setPreliminaryAction(BongcloudAction.RAISE);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(1);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
+	}
+	
+	@Test
+	public void preliminaryRaiseWhen3PlusBet() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(5);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 5 + 1;
+		HandInfo hi = new HandInfo();
+	    hi.setPreliminaryAction(BongcloudAction.RAISE);
+		hi.setToCall(toCall);
+		hi.setNumOfRaises(3);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
+	}
+	
+	@Test
+	public void preliminaryRaiseWhenAggressivePlayers() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		Mockito.when(gameInfo.getNumRaises()).thenReturn(2);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = bigBLindSize * 4 - 1;
+		HandInfo hi = new HandInfo();
+		List<PlayerDesc> playersHand = new ArrayList<>(
+				Arrays.asList(
+						new PlayerDesc("player-desc1", Aggro.AGGRESSIVE, Tight.TIGHT),
+						new PlayerDesc("player-desc2", Aggro.AGGRESSIVE, Tight.TIGHT),
+						new PlayerDesc("player-desc3", Aggro.AGGRESSIVE, Tight.TIGHT)));
+		hi.setPreliminaryAction(BongcloudAction.RAISE);
+		hi.setToCall(toCall);
+		hi.setPlayersInHand(playersHand);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+		
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, toCall * 2).toString());
+	}
+	
+	@Test
+	public void preliminaryPremium() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("gameInfo", gameInfo);
+		double bigBLindSize = gameInfo.getBigBlindSize();
+		double toCall = 10.0;
+		HandInfo hi = new HandInfo();
+		hi.setPreliminaryAction(BongcloudAction.PREMIUM);
+		hi.setToCall(toCall);
+		
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+	    kSession.delete(kSession.getFactHandle(hi));
+	    
+	    assertThat(1, is(fired));
+	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 2).toString());
+	}
 }
