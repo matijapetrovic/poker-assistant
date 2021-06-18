@@ -33,7 +33,18 @@ public class HandInfo {
 	
 	private List<PlayerDesc> playersInHand;
 	
-	public HandInfo() { }
+	private HandEval handEval;
+	
+	public HandInfo() { 
+		this.handEval = new HandEval();
+	}
+	
+	public HandInfo(Card c1, Card c2, HandEval handEval) {
+		this.card1 = c1;
+		this.card2 = c2;
+		this.handEval = handEval;
+		this.numPlayers = 0;
+	}
 	
 	public HandInfo(
 			Card card1, 
@@ -56,6 +67,7 @@ public class HandInfo {
 		this.didRaise = didRaise;
 		
 		this.playersInHand = playersInHand;
+		this.handEval = new HandEval();
 	}
 	
 
@@ -64,7 +76,7 @@ public class HandInfo {
 	}
 
 	public void setHandRank(Hand h) {
-		this.handRank = HandEvaluator.handRank(card1, card2, h, numPlayers);
+		this.handRank = handEval.evalHand(card1, card2, h, numPlayers);
 	}
 	
 	public void setHandRank(double rank) {
