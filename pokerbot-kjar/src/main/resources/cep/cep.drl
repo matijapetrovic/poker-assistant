@@ -1,0 +1,168 @@
+package cep
+import java.util.List;
+
+import bots.bongcloudbot.PlayerDesc.Tight;
+import bots.bongcloudbot.PlayerDesc.Aggro;
+import bots.bongcloudbot.PlayerDesc;
+import bots.bongcloudbot.HandInfo;
+import bots.bongcloudbot.BongcloudAction;
+import bots.bongcloudbot.StartingHandMatrix;
+import bots.bongcloudbot.PlayerActionEvent;
+import bots.bongcloudbot.ChangeTightnessEvent;
+import bots.bongcloudbot.ChangeAggressivenessEvent;
+import com.biotools.meerkat.Action;
+import com.biotools.meerkat.GameInfo;
+
+global GameInfo gameInfo;
+
+rule "Insert Increase tightness event when no previous"
+	salience 3
+	when
+		$event1: PlayerActionEvent($playerName: name, preFlop == true)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName,
+				preFlop == true
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isFold() == true
+			) from $events,
+			count($t)
+		)
+		not(
+			ChangeTightnessEvent(
+				name == $playerName,
+				change == 1,
+				intersect($events) == true
+			)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, 1, $events));
+end
+
+rule "Insert Decrease tightness event no previous"
+	salience 3
+	when
+		$event1: PlayerActionEvent($playerName: name, preFlop == true)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName,
+				preFlop == true
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isCheckOrCall() == true
+			) from $events,
+			count($t)
+		)
+		not(
+			ChangeTightnessEvent(
+				name == $playerName,
+				change == -1,
+				intersect($events) == true
+			)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeTightnessEvent($playerName, -1, $events));
+end
+
+rule "Insert Increase aggressiveness event no previous"
+	salience 3
+	when
+		$event1: PlayerActionEvent($playerName: name, preFlop == false)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName,
+				preFlop == false
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isBetOrRaise() == true
+			) from $events,
+			count($t)
+		)
+		not(
+			ChangeAggressivenessEvent(
+				name == $playerName,
+				change == 1,
+				intersect($events) == true
+			)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeAggressivenessEvent($playerName, 1, $events));
+end
+
+rule "Insert Decrease aggressiveness event no previous"
+	salience 3
+	when
+		$event1: PlayerActionEvent($playerName: name, preFlop == false)
+		$events: List(size > 0) from accumulate(
+			$event2: PlayerActionEvent(
+				name == $playerName,
+				preFlop == false
+			) over window:length(5),
+			collectList($event2)
+		)
+		Number(intValue == 5) from accumulate(
+			PlayerActionEvent(
+				$t: this,
+				action.isCheckOrCall() == true
+			) from $events,
+			count($t)
+		)
+		not(
+			ChangeAggressivenessEvent(
+				name == $playerName,
+				change == -1,
+				intersect($events) == true
+			)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		insert(new ChangeAggressivenessEvent($playerName, -1, $events));
+end
+
+rule "Update tightness"
+salience 2
+	when
+		$e: ChangeTightnessEvent($playerName: name, $change: change, changed == false)
+		$desc: PlayerDesc(playerName == $playerName)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($desc) {
+			updateTightness($change);
+		}
+		modify($e) {
+			setChanged(true);
+		}
+
+end
+
+rule "Update aggressiveness"
+salience 2
+	when
+		$e: ChangeAggressivenessEvent($playerName: name, $change: change, changed == false)
+		$desc: PlayerDesc(playerName == $playerName)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($desc) {
+			updateAggressiveness($change);
+		}
+		modify($e) {
+			setChanged(true);
+		}
+
+end
