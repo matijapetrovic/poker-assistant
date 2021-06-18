@@ -27,7 +27,7 @@ end
 
 
 rule "Cbet if raised and no one raised"
-	salience phase*50
+	salience phase*50 + 5
 	when
 		$hi: HandInfo($numPlayers: numPlayers <= 3, didRaise == true, gameInfo.getNumRaises() == 0, 
 						gameInfo.getStage() == Holdem.FLOP, action == null)

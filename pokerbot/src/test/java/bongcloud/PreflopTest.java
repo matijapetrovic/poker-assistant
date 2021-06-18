@@ -87,23 +87,25 @@ public class PreflopTest {
         assertThat(1, is(fired));
 	}
 	
-//	@Test
-//	public void setPreliminaryAction() {
-//		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
-//		kSession.setGlobal("phase", 1);
-//		kSession.setGlobal("gameInfo", gameInfo);
-//		HandInfo hi = new HandInfo();
-//		hi.setCard1(card1);
-//		hi.setCard2(card2);
-//		
-//		kSession.insert(new StartingHandMatrix());
-//		kSession.insert(hi);
-//	    int fired = kSession.fireAllRules();
-//	    
-//        assertThat(1, is(fired));
-//        //assertNotNull(hi.getPreliminaryAction());
-//	}
-//	
+	@Test
+	public void setPreliminaryAction() {
+		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
+		kSession.setGlobal("phase", 1);
+		kSession.setGlobal("gameInfo", gameInfo);
+		HandInfo hi = new HandInfo();
+		hi.setCard1(card1);
+		hi.setCard2(card2);
+		hi.setAction(Action.callAction(0.0));
+		StartingHandMatrix matrix = new StartingHandMatrix();
+		matrix.setNeutralMatrix();
+		kSession.insert(matrix);
+		kSession.insert(hi);
+	    int fired = kSession.fireAllRules();
+	    
+        assertThat(1, is(fired));
+        //assertNotNull(hi.getPreliminaryAction());
+	}
+	
 	@Test
 	public void preliminaryFoldAndToCallIsZero() {
 		kSession = KnowledgeSessionHelper.getStatefulKnowledgeSession(kieContainer, kSessionName);
