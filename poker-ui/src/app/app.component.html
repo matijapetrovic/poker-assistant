@@ -1,0 +1,27 @@
+<div class="card-container">
+  <mat-card class="form-card">
+    <mat-card-title>Poker bot</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form">
+        <mat-form-field>
+          <mat-label>Bot playstyle</mat-label>
+          <mat-select formControlName="tightness">
+            <mat-option value="-1">Loose</mat-option>
+            <mat-option value="0">Neutral</mat-option>
+            <mat-option value="1">Tight</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number of games</mat-label>
+          <input type="number" min="1" max="1000" matInput formControlName="numGames">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Play</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div>
+  <img *ngIf="results" [src]="results" alt="Poker bot game results">
+</div>
