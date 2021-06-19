@@ -11,7 +11,7 @@ export class PokerBotService {
   private apiUrl = `${environment.apiUrl}/game`
   constructor(private http: HttpClient) { }
 
-  startGame(botOptions: BotOptions): Observable<string> {
-    return this.http.post<string>(this.apiUrl, botOptions);
+  startGame(botOptions: BotOptions): Observable<any> {
+    return this.http.post<any>(this.apiUrl, botOptions);
   }
 }

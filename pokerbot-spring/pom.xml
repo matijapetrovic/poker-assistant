@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.1</version>
+		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bongcloud</groupId>
@@ -14,9 +14,14 @@
 	<name>pokerbot</name>
 	<description>Pokerbot project</description>
 	<properties>
+		<kie.version>6.5.0.Final</kie.version>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -32,6 +37,98 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.security</groupId>-->
+<!--			<artifactId>spring-security-web</artifactId>-->
+<!--			<version>5.5.0</version>-->
+<!--		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.security</groupId>-->
+<!--			<artifactId>spring-security-config</artifactId>-->
+<!--			<version>5.5.0</version>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-ci</artifactId>
+			<version>${kie.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-spring</artifactId>
+			<version>${kie.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.swt/org.eclipse.swt.cocoa.macosx.x86_64 -->
+		<dependency>
+			<groupId>org.eclipse.swt</groupId>
+			<artifactId>org.eclipse.swt.cocoa.macosx.x86_64</artifactId>
+			<version>4.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-stable</artifactId>
+			<version>3.6.12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.jcip/jcip-annotations -->
+		<dependency>
+			<groupId>net.jcip</groupId>
+			<artifactId>jcip-annotations</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -46,6 +143,14 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>10</source>
+					<target>10</target>
 				</configuration>
 			</plugin>
 		</plugins>

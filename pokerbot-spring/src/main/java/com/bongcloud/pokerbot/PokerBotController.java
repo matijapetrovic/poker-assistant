@@ -1,11 +1,12 @@
 package com.bongcloud.pokerbot;
 
 import lombok.RequiredArgsConstructor;
+import org.drools.core.io.impl.ByteArrayResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class PokerBotController {
     private final PokerBotService pokerBotService;
 
-    @PostMapping("")
-    public ResponseEntity<String> playGame(BotOptionsDTO botOptions) {
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping(path = "", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> playGame(@RequestBody BotOptionsDTO botOptions) throws IOException {
         return ResponseEntity.ok(pokerBotService.playGame(botOptions));
     }
+
 }
