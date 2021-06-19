@@ -57,7 +57,7 @@ public class PreflopTest {
 		kSession.insert(Tight.TIGHT);
 	    int fired = kSession.fireAllRules();
 	        
-        assertThat(1, is(fired));
+        assertEquals(1, fired);
 	}
 	
 	@Test
@@ -66,8 +66,8 @@ public class PreflopTest {
 		kSession.setGlobal("phase", 1);
 		kSession.insert(Tight.NEUTRAL);
 	    int fired = kSession.fireAllRules();
-	    
-        assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	}
 	
 	@Test
@@ -76,8 +76,8 @@ public class PreflopTest {
 		kSession.setGlobal("phase", 1);
 		kSession.insert(Tight.LOOSE);
 	    int fired = kSession.fireAllRules();
-	    
-        assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	}
 	
 	@Test
@@ -94,9 +94,9 @@ public class PreflopTest {
 		kSession.insert(matrix);
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-	    
-        assertThat(1, is(fired));
-        //assertNotNull(hi.getPreliminaryAction());
+
+		assertEquals(1, fired);
+        assertNotNull(hi.getPreliminaryAction());
 	}
 	
 	@Test
@@ -112,8 +112,9 @@ public class PreflopTest {
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
-		
-	    assertThat(1, is(fired));
+
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -129,8 +130,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
@@ -146,8 +147,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -164,8 +165,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -182,8 +183,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
@@ -202,10 +203,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
-	    System.out.println(hi.getAction().toString());
-	    System.out.println(hi.getAction().toString());
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
@@ -230,8 +229,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 2.5).toString());
 	}
 	
@@ -256,8 +255,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -277,8 +276,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 4).toString());
 	}
 	
@@ -297,8 +296,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -317,8 +316,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
@@ -337,8 +336,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.foldAction(toCall).toString());
 	}
 	
@@ -362,8 +361,8 @@ public class PreflopTest {
 		
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, toCall * 2).toString());
 	}
 	
@@ -381,8 +380,8 @@ public class PreflopTest {
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
-	    
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 	    assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, bigBLindSize * 2).toString());
 	}
 }

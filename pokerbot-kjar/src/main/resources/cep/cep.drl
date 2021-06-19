@@ -16,7 +16,6 @@ import com.biotools.meerkat.GameInfo;
 global GameInfo gameInfo;
 
 rule "Insert Increase tightness event when no previous"
-	salience 3
 	when
 		$event1: PlayerActionEvent($playerName: name, preFlop == true)
 		$events: List(size > 0) from accumulate(
@@ -46,7 +45,6 @@ rule "Insert Increase tightness event when no previous"
 end
 
 rule "Insert Decrease tightness event no previous"
-	salience 3
 	when
 		$event1: PlayerActionEvent($playerName: name, preFlop == true)
 		$events: List(size > 0) from accumulate(
@@ -76,7 +74,6 @@ rule "Insert Decrease tightness event no previous"
 end
 
 rule "Insert Increase aggressiveness event no previous"
-	salience 3
 	when
 		$event1: PlayerActionEvent($playerName: name, preFlop == false)
 		$events: List(size > 0) from accumulate(
@@ -106,7 +103,6 @@ rule "Insert Increase aggressiveness event no previous"
 end
 
 rule "Insert Decrease aggressiveness event no previous"
-	salience 3
 	when
 		$event1: PlayerActionEvent($playerName: name, preFlop == false)
 		$events: List(size > 0) from accumulate(
@@ -136,7 +132,6 @@ rule "Insert Decrease aggressiveness event no previous"
 end
 
 rule "Update tightness"
-salience 2
 	when
 		$e: ChangeTightnessEvent($playerName: name, $change: change, changed == false)
 		$desc: PlayerDesc(playerName == $playerName)
@@ -152,7 +147,6 @@ salience 2
 end
 
 rule "Update aggressiveness"
-salience 2
 	when
 		$e: ChangeAggressivenessEvent($playerName: name, $change: change, changed == false)
 		$desc: PlayerDesc(playerName == $playerName)

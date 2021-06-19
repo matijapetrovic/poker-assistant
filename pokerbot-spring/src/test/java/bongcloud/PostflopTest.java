@@ -62,8 +62,8 @@ public class PostflopTest {
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
-		
-	    assertThat(1, is(fired));
+
+		assertEquals(1, fired);
 
 	}
 	
@@ -83,8 +83,8 @@ public class PostflopTest {
 		kSession.insert(hi);
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
-        
-        assertThat(1, is(fired));
+
+		assertEquals(1, fired);
         assertEquals(hi.getAction().toString(), Action.betAction(gameInfo.getTotalPotSize() * 0.5 + (0.1 * hi.getNumPlayers())).toString());
 	}
 
@@ -108,7 +108,7 @@ public class PostflopTest {
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
 
-        assertThat(1, is(fired));
+		assertEquals(1, fired);
         assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, toCall*2).toString());
 	}
 	
@@ -129,7 +129,7 @@ public class PostflopTest {
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
 
-        assertThat(1, is(fired));
+		assertEquals(1, fired);
         assertEquals(hi.getAction().toString(), Action.raiseAction(toCall, toCall*2).toString());
 	}
 	
@@ -148,7 +148,7 @@ public class PostflopTest {
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
 
-        assertThat(1, is(fired));
+		assertEquals(1, fired);
         assertEquals(hi.getAction().toString(), Action.callAction(toCall).toString());
 	}
 	
@@ -167,7 +167,7 @@ public class PostflopTest {
 	    int fired = kSession.fireAllRules();
 	    kSession.delete(kSession.getFactHandle(hi));
 
-        assertThat(1, is(fired));
+		assertEquals(1, fired);
         assertEquals(hi.getAction().toString(), Action.checkOrFoldAction(toCall).toString());
 	}
 }
