@@ -63,11 +63,10 @@ public class BongcloudBot implements Player {
 		kSession.insert(hi);
 		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {
-			kSession.insert(PlayerDesc.Tight.NEUTRAL);
 			kSession.fireAllRules();
 			didRaise = hi.isDidRaise();
 			kSession.delete(kSession.getFactHandle(hi));
-			return hi.getAction() == null ? Action.callAction(gameInfo) : hi.getAction();
+			return hi.getAction();
 		}
 		else {
 			kSession.fireAllRules();
@@ -151,6 +150,8 @@ public class BongcloudBot implements Player {
 	@Override
 	public void init(Preferences preferences) {
 		this.preferences = preferences;
+		String playstyle = preferences.getPreference("PLAYSTYLE");
+		kSession.insert(PlayerDesc.Tight.values()[Integer.parseInt(playstyle) + 1]);
 	}
 	
 

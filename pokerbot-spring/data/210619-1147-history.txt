@@ -1,0 +1,151 @@
+Full Tilt Poker Game #93715222876300: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Agt 2 (DemoBot/AlwaysCallBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Js 9d]
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [As Kd]
+Agt 2 (DemoBot/AlwaysCallBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [9c Kh 5s]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [9c Kh 5s] [Ts]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [9c Kh 5s Ts] [Jd]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) shows [As Kd]
+Agt 1 (BongcloudBot/BongcloudBot) shows [Js 9d]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [Js 9d] and won ($0.04)
+
+
+Full Tilt Poker Game #93715222876301: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/AlwaysCallBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4d 6d]
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [7h 5h]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/AlwaysCallBot) checks
+*** FLOP *** [3h 9h Kc]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) checks
+*** TURN *** [3h 9h Kc] [8h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) checks
+*** RIVER *** [3h 9h Kc 8h] [4h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [4d 6d]
+Agt 2 (DemoBot/AlwaysCallBot) shows [7h 5h]
+Agt 2 (DemoBot/AlwaysCallBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/AlwaysCallBot) showed [7h 5h] and won ($0.04)
+
+
+Full Tilt Poker Game #93715222876302: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Agt 2 (DemoBot/AlwaysCallBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ad 3d]
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [3h 6d]
+Agt 2 (DemoBot/AlwaysCallBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [Ah 9h 2c]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [Ah 9h 2c] [8c]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [Ah 9h 2c 8c] [5s]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) shows [3h 6d]
+Agt 1 (BongcloudBot/BongcloudBot) shows [Ad 3d]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [Ad 3d] and won ($0.04)
+
+
+Full Tilt Poker Game #93715222876303: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/AlwaysCallBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [Js 9d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [As Kd]
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/AlwaysCallBot) calls $0.04
+*** FLOP *** [9c Kh 5s]
+Agt 1 (BongcloudBot/BongcloudBot) bets $0.26
+Agt 2 (DemoBot/AlwaysCallBot) calls $0.26
+*** TURN *** [9c Kh 5s] [Ts]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) checks
+*** RIVER *** [9c Kh 5s Ts] [Jd]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [As Kd]
+Agt 2 (DemoBot/AlwaysCallBot) shows [Js 9d]
+Agt 2 (DemoBot/AlwaysCallBot) wins the pot ($0.64)
+*** SUMMARY ***
+Seat 1: Agt 2 (DemoBot/AlwaysCallBot) showed [Js 9d] and won ($0.64)
+
+
+Full Tilt Poker Game #93715222876304: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 2 (DemoBot/AlwaysCallBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [4d 6d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7h 5h]
+Agt 2 (DemoBot/AlwaysCallBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [3h 9h Kc]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [3h 9h Kc] [8h]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [3h 9h Kc 8h] [4h]
+Agt 2 (DemoBot/AlwaysCallBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/AlwaysCallBot) shows [4d 6d]
+Agt 1 (BongcloudBot/BongcloudBot) shows [7h 5h]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) showed [7h 5h] and won ($0.04)
+
+
+Full Tilt Poker Game #93715222876305: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:47:11 CEST - 2021/06/19
+Seat 1: Agt 2 (DemoBot/AlwaysCallBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/AlwaysCallBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 2 (DemoBot/AlwaysCallBot) [Ad 3d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3h 6d]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/AlwaysCallBot)
+Agt 2 (DemoBot/AlwaysCallBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 2 (DemoBot/AlwaysCallBot) collected ($0.02)
+
+

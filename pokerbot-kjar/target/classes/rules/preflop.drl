@@ -206,6 +206,25 @@ rule "Preliminary raise when aggressive players"
 		}
 end
 
+rule "Preliminary raise when passive players"
+	salience phase*25
+	when
+		$hi: HandInfo($playersInHand: playersInHand, $toCall: toCall,
+						preliminaryAction == BongcloudAction.RAISE, gameInfo.getNumRaises() == 2,
+						 action == null)
+		Number(intValue <= 0) from accumulate(
+			PlayerDesc(
+				$aggro: aggressiveness.level
+			) from $playersInHand,
+			sum($aggro)
+		)
+	then
+		System.out.println("Rule: " + drools.getRule().getName());
+		modify($hi) {
+			setAction(Action.callAction($toCall));
+		}
+end
+
 
 rule "Preliminary premium"
 	salience phase*20

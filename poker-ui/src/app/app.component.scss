@@ -6,7 +6,11 @@
 
 .form-card {
   max-width: 700px;
+  width: 40%;
   margin: 0 auto;
+}
+.image {
+  width: 60%;
 }
 
 form > mat-form-field {

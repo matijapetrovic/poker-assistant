@@ -33,8 +33,9 @@ export class AppComponent {
   constructor(private pokerBotService: PokerBotService) {
     this.form = new FormGroup({
       playstyle: new FormControl(0),
-      numGames: new FormControl(0),
-      opponent: new FormControl([])
+      numGames: new FormControl(100),
+      opponent: new FormControl([]),
+      initialBankroll: new FormControl(2.0)
     });
   }
 
@@ -51,7 +52,8 @@ export class AppComponent {
     const botOptions: BotOptions = {
       playstyle: this.form.value.playstyle,
       numGames: this.form.value.numGames,
-      opponent: this.form.value.opponent
+      opponent: this.form.value.opponent,
+      initialBankroll: this.form.value.initialBankroll
     };
     this.image = null;
     this.isImageLoading = true;

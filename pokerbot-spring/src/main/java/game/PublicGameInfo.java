@@ -859,7 +859,6 @@ public final class PublicGameInfo implements GameInfo {
      */
     private Action correctPlayerErrors(Action act, int s) {
         PublicPlayerInfo player = getPlayer(s);
-
         switch (act.getType()) {
 
             case Action.FOLD:

@@ -1,0 +1,1474 @@
+Full Tilt Poker Game #91264057440200: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Js 9d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [As Kd]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [9c Kh 5s]
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440201: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4d 6d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7h 5h]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [3h 9h Kc]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [3h 9h Kc] [8h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440202: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ad 3d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3h 6d]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440203: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [2h 6c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4d Ac]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440204: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [5d 2d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [9h 8h]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [5c Js 2s]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [5c Js 2s] [Qd]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [5c Js 2s Qd] [6d]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) shows [9h 8h]
+Agt 1 (BongcloudBot/BongcloudBot) shows [5d 2d]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [5d 2d] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440205: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [9c 6c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Kc 7c]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [8h 5c 9s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [8h 5c 9s] [9d]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [8h 5c 9s 9d] [4s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [9c 6c]
+Agt 2 (DemoBot/SimpleBot) mucks
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [9c 6c] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440206: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Js Jc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5c Ac]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [Tc 3c Ah]
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440207: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7h 6d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5s Qs]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [4d Ad 4s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440208: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Jc 4s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Jd 7s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440209: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3s 5d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5c Ts]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Qh As 2s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Qh As 2s] [Ad]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [Qh As 2s Ad] [Kd]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [3s 5d]
+Agt 2 (DemoBot/SimpleBot) shows [5c Ts]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [5c Ts] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440210: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ks Kc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3h As]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440211: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qs 5d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Js Kd]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440212: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [2h 7c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4s Jd]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440213: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3d 2d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5d Qd]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [8s 9c Ts]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440214: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ah 6d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ac Td]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [2s 9h 6h]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [2s 9h 6h] [5s]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [2s 9h 6h 5s] [4c]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) shows [Ac Td]
+Agt 1 (BongcloudBot/BongcloudBot) shows [Ah 6d]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [Ah 6d] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440215: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Kh Jc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Qc 3d]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [6h 4h 3s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [6h 4h 3s] [Th]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440216: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3c 3h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [9d 6c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440217: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4h 2s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4d Qh]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440218: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [9c Tc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Th 2s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440219: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [6d Td]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7s Js]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Ah Jh 8s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) calls $0.04
+*** TURN *** [Ah Jh 8s] [9c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [Ah Jh 8s 9c] [5s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [6d Td]
+Agt 2 (DemoBot/SimpleBot) shows [7s Js]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [7s Js] and won ($0.16)
+
+
+Full Tilt Poker Game #91264057440220: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ad 5d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ah 9c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440221: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Kc Qd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6h Jd]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [9s 2c 8h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440222: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8s Ac]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Js 4s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440223: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Kc 5s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ks 5d]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440224: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4c 6c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7h Jh]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440225: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8d 6s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [8c 2s]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [8h As 5c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440226: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3d 5d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3h 2d]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440227: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7d 9d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ah Tc]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [4s Kc 8c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440228: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8s Tc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4c Ac]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [3s Js Td]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** TURN *** [3s Js Td] [5s]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** RIVER *** [3s Js Td 5s] [9s]
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) shows [4c Ac]
+Agt 1 (BongcloudBot/BongcloudBot) shows [8s Tc]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [8s Tc] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440229: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [6d 9h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3c 6s]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440230: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qc Ks]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ac 9s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440231: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [6c 8c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ad 8s]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [5h 3d 9h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [5h 3d 9h] [Kc]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [5h 3d 9h Kc] [9c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [6c 8c]
+Agt 2 (DemoBot/SimpleBot) shows [Ad 8s]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [Ad 8s] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440232: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ac 6c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4c Qc]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440233: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8s Js]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2d 4h]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [6c Ah 2h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [6c Ah 2h] [Kd]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [6c Ah 2h Kd] [Qc]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [8s Js]
+Agt 2 (DemoBot/SimpleBot) shows [2d 4h]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [2d 4h] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440234: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ad 5s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Tc 7c]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [Kd 3h 6h]
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440235: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [6c 8h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4d Jc]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [2c Jd 3d]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440236: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [5h 3c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5c 7s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440237: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7d Qd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5h 4c]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [3d 7c Ah]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440238: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [As Jd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5h Kc]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440239: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7c Ac]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4h 2s]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Jc Td 5c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Jc Td 5c] [As]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.04
+*** RIVER *** [Jc Td 5c As] [7h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [7c Ac]
+Agt 2 (DemoBot/SimpleBot) mucks
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.12)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [7c Ac] and won ($0.12)
+
+
+Full Tilt Poker Game #91264057440240: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Th 5c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7c 6s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440241: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3s 3h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [8s Ah]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [9h Qh 2c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440242: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qh 2h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2s Jh]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440243: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qd 6s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3c Qc]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440244: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8d 7h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6d 5h]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440245: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [9d Jh]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Kc 3d]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [As 2c 9h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440246: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Jh Jc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3d 4d]
+Agt 2 (DemoBot/SimpleBot) calls $0.01
+Agt 1 (BongcloudBot/BongcloudBot) checks
+*** FLOP *** [4c 2s Kd]
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) raises to $0.10
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440247: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3d Jh]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ad 4h]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440248: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Jc 4h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2d Ac]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440249: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Kc Qc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [4s Ad]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Tc Jd 7s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.08)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.08)
+
+
+Full Tilt Poker Game #91264057440250: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Td Kc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6c Jc]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440251: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [5c Jc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6s Kd]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Qd 8c 2s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Qd 8c 2s] [8h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [Qd 8c 2s 8h] [Qh]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [5c Jc]
+Agt 2 (DemoBot/SimpleBot) shows [6s Kd]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [6s Kd] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440252: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8h Kc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2h 2s]
+Agt 2 (DemoBot/SimpleBot) raises to $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.02 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440253: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [9s 5h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Qc 2h]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440254: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4c 7h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2c 4h]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440255: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [2s Tc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6d 3c]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440256: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4s Jd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7d 2c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440257: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Jd 7s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [7d 6s]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440258: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3s Qd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [8s 2c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440259: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7d 5s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Jh Qc]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Ts Kc Js]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.02
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (DemoBot/SimpleBot) calls $0.04
+*** TURN *** [Ts Kc Js] [9s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.16)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.16)
+
+
+Full Tilt Poker Game #91264057440260: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ks 6d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [8d 7c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440261: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ts Tc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Qh 4d]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [5d Js Td]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [5d Js Td] [7h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [5d Js Td 7h] [4h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [Ts Tc]
+Agt 2 (DemoBot/SimpleBot) mucks
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [Ts Tc] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440262: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [5s 8h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Ts As]
+Agt 2 (DemoBot/SimpleBot) raises to $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.02 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440263: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4c Kc]
+Dealt to Agt 2 (DemoBot/SimpleBot) [9h Kd]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Ad 4h Jh]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Ad 4h Jh] [Ks]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.12
+Agt 2 (DemoBot/SimpleBot) calls $0.08
+*** RIVER *** [Ad 4h Jh Ks] [5s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.04
+Agt 2 (DemoBot/SimpleBot) shows [9h Kd]
+Agt 1 (BongcloudBot/BongcloudBot) shows [4c Kc]
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.36)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [4c Kc] and won ($0.36)
+
+
+Full Tilt Poker Game #91264057440264: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3s 2h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [8c Qh]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440265: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8h 7c]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3d Jh]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Qc 5d 3s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Qc 5d 3s] [7s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [Qc 5d 3s 7s] [4h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [8h 7c]
+Agt 2 (DemoBot/SimpleBot) mucks
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) showed [8h 7c] and won ($0.04)
+
+
+Full Tilt Poker Game #91264057440266: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [As 3s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [6c 9d]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440267: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7h Td]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Qh 5c]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440268: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qd 7h]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3h 7s]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440269: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7s 9d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [5s 5d]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [4d Kh 8c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [4d Kh 8c] [Ad]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440270: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Qc 8d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [2d 4h]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440271: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [9c Qd]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Js 7c]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [7s 3s 2h]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [7s 3s 2h] [6c]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) bets $0.04
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.04 returned to Agt 2 (DemoBot/SimpleBot)
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) collected ($0.04)
+
+
+Full Tilt Poker Game #91264057440272: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 2 (DemoBot/SimpleBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7h 9d]
+Dealt to Agt 2 (DemoBot/SimpleBot) [Kh 4c]
+Agt 2 (DemoBot/SimpleBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #91264057440273: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:06:20 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (DemoBot/SimpleBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (DemoBot/SimpleBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [8s 3s]
+Dealt to Agt 2 (DemoBot/SimpleBot) [3d 4h]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (DemoBot/SimpleBot) checks
+*** FLOP *** [Kc Jc Qc]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** TURN *** [Kc Jc Qc] [Jh]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+*** RIVER *** [Kc Jc Qc Jh] [4s]
+Agt 1 (BongcloudBot/BongcloudBot) checks
+Agt 2 (DemoBot/SimpleBot) checks
+Agt 1 (BongcloudBot/BongcloudBot) shows [8s 3s]
+Agt 2 (DemoBot/SimpleBot) shows [3d 4h]
+Agt 2 (DemoBot/SimpleBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 2 (DemoBot/SimpleBot) showed [3d 4h] and won ($0.04)
+
+

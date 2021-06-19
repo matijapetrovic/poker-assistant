@@ -23,13 +23,17 @@
           <mat-label>Number of games</mat-label>
           <input type="number" min="1" max="1000" matInput formControlName="numGames">
         </mat-form-field>
+        <mat-form-field>
+          <mat-label>Initial bankroll</mat-label>
+          <input type="number" min="1" max="1000" matInput formControlName="initialBankroll" step="0.01">
+        </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button (click)="startGame()">Play</button>
     </mat-card-actions>
   </mat-card>
-  <div class="center">
+  <div class="center image" *ngIf="isImageLoading || image">
     <div class="center">
       <mat-spinner *ngIf="isImageLoading"></mat-spinner>
       <img *ngIf="image" [src]="image" alt="Poker bot game results">

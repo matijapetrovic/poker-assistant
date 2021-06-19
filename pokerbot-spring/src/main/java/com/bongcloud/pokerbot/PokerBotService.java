@@ -13,6 +13,9 @@ import game.deck.SerializedDeck;
 import game.stats.BankrollGraphUI;
 import lombok.RequiredArgsConstructor;
 import org.drools.core.io.impl.ByteArrayResource;
+import org.kie.api.KieServices;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -27,11 +30,14 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class PokerBotService {
-
+    private KieSession kSession;
+    private KieContainer kContainer;
+    private KieServices ks;
     public byte[] playGame(BotOptionsDTO botOptions) throws IOException {
 
         // number of games
@@ -40,8 +46,8 @@ public class PokerBotService {
         boolean permuteSeats = true;
         // four Bots fight against each other
         // valid BotNames can be obtained from the botRepository
-        String[] botNames = new String[]{"BongcloudBot/BongcloudBot", "DemoBot/AlwaysCallBot"};
-
+        String[] botNames = new String[]{"BongcloudBot/BongcloudBot", botOptions.getOpponent()};
+        setPlaystyle(botOptions.getPlaystyle());
         BotRepository botRepository = new BotRepository();
         TableSeater tableSeater = new CashGameTableSeater(botRepository, permuteSeats);
         GameIDGenerator gameIDGenerator = new GameIDGenerator(System.nanoTime());
@@ -53,7 +59,7 @@ public class PokerBotService {
         CashGameDescription cashGameDescription = new CashGameDescription();
         cashGameDescription.setSmallBlind(0.01);
         cashGameDescription.setBigBlind(0.02);
-        cashGameDescription.setInitialBankRoll(2);
+        cashGameDescription.setInitialBankRoll(botOptions.getInitialBankroll());
         cashGameDescription.setNumGames(numGames);
 
         cashGameDescription.setBotNames(botNames);
@@ -69,6 +75,21 @@ public class PokerBotService {
         bankrollgraphUI.createGraph(simulationFileName);
 
         return getImage("./data/" + simulationFileName + "-chart.png");
+    }
+
+    private void setPlaystyle(int playstyle) {
+        try {
+            List<String> lines = Files.readAllLines(Paths.get("./data/bots/BongcloudBot.pd"));
+            lines.remove(lines.size() - 1);
+            lines.add("PLAYSTYLE=" + playstyle);
+            FileWriter writer = new FileWriter("./data/bots/BongcloudBot.pd");
+            for (String line: lines) {
+                writer.write(line + System.lineSeparator());
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private byte[] getImage(String imageName) throws IOException {

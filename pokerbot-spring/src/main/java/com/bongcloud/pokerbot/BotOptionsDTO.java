@@ -13,5 +13,6 @@ import java.util.List;
 public class BotOptionsDTO {
     int playstyle;
     int numGames;
+    double initialBankroll;
     String opponent;
 }
