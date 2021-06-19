@@ -35,9 +35,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class PokerBotService {
-    private KieSession kSession;
-    private KieContainer kContainer;
-    private KieServices ks;
     public byte[] playGame(BotOptionsDTO botOptions) throws IOException {
 
         // number of games

@@ -23,8 +23,9 @@ public class BongcloudBot implements Player {
 	private GameInfo gameInfo;
 
 	private PlayerStats playerStats;
-	
+
 	private KieSession kSession;
+	private KieSession cepSession;
 	private KieContainer kContainer;
 	private KieServices ks;
 	
@@ -36,6 +37,7 @@ public class BongcloudBot implements Player {
 		ks = KieServices.Factory.get();
 		kContainer = ks.getKieClasspathContainer();
 		kSession = kContainer.newKieSession("ksession-rules");
+		cepSession = kContainer.newKieSession("ksession-cep");
 		playerStats = new PlayerStats();
 	}
 	
@@ -145,6 +147,7 @@ public class BongcloudBot implements Player {
 		this.card2 = card2;
 		this.seat = seat;
 		this.didRaise = false;
+		this.cepSession.fireAllRules();
 	}
 
 	@Override
@@ -160,7 +163,9 @@ public class BongcloudBot implements Player {
 		this.gameInfo = gameInfo;
 		List<PlayerDesc> playerDescriptions = new ArrayList<>();
 		for (int seat = 0; seat < gameInfo.getNumSeats(); seat++) {
-			playerDescriptions.add(new PlayerDesc(gameInfo.getPlayerName(seat)));
+			PlayerDesc playerDesc = new PlayerDesc(gameInfo.getPlayerName(seat));
+			playerDescriptions.add(playerDesc);
+			this.cepSession.insert(playerDesc);
 		}
 		playerStats.setPlayerDescriptions(playerDescriptions);
 	}
@@ -168,10 +173,11 @@ public class BongcloudBot implements Player {
 	
 	@Override
 	public void actionEvent(int seat, Action action) {
+		if (seat == this.seat)
+			return;
 		PlayerInfo pi = gameInfo.getPlayer(seat);
 		String name = pi.getName();
-		// create event for player
-		this.kSession.insert(new PlayerActionEvent(name, action, gameInfo.isPreFlop()));
+		this.cepSession.insert(new PlayerActionEvent(name, action, gameInfo.isPreFlop()));
 	}
 
 	@Override

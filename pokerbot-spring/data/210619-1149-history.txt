@@ -1,0 +1,97 @@
+Full Tilt Poker Game #93835707056200: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:13 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (PrologBot/PrologBot) ($2.00)
+Agt 2 (PrologBot/PrologBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Js 9d]
+Dealt to Agt 2 (PrologBot/PrologBot) [As Kd]
+Agt 2 (PrologBot/PrologBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #93835707056201: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:13 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (PrologBot/PrologBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (PrologBot/PrologBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [4d 6d]
+Dealt to Agt 2 (PrologBot/PrologBot) [7h 5h]
+Agt 1 (BongcloudBot/BongcloudBot) calls $0.01
+Agt 2 (PrologBot/PrologBot) folds
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.04)
+
+
+Full Tilt Poker Game #93835707056202: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:13 CEST - 2021/06/19
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Seat 2: Agt 2 (PrologBot/PrologBot) ($2.00)
+Agt 2 (PrologBot/PrologBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [Ad 3d]
+Dealt to Agt 2 (PrologBot/PrologBot) [3h 6d]
+Agt 2 (PrologBot/PrologBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #93835707056203: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:13 CEST - 2021/06/19
+Seat 1: Agt 2 (PrologBot/PrologBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (PrologBot/PrologBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 2 (PrologBot/PrologBot) [Js 9d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [As Kd]
+Agt 1 (BongcloudBot/BongcloudBot) raises to $0.06
+Agt 2 (PrologBot/PrologBot) folds
+Uncalled bet of $0.04 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.04)
+*** SUMMARY ***
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.04)
+
+
+Full Tilt Poker Game #93835707056204: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:14 CEST - 2021/06/19
+Seat 1: Agt 2 (PrologBot/PrologBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 2 (PrologBot/PrologBot) posts the small blind of $0.01
+Agt 1 (BongcloudBot/BongcloudBot) posts the big blind of $0.02
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Agt 2 (PrologBot/PrologBot) [4d 6d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [7h 5h]
+Agt 2 (PrologBot/PrologBot) folds
+Uncalled bet of $0.01 returned to Agt 1 (BongcloudBot/BongcloudBot)
+Agt 1 (BongcloudBot/BongcloudBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) collected ($0.02)
+
+
+Full Tilt Poker Game #93835707056205: Table OpenTestBed - $0.01/$0.02 - Limit Hold'em - 11:49:14 CEST - 2021/06/19
+Seat 1: Agt 2 (PrologBot/PrologBot) ($2.00)
+Seat 2: Agt 1 (BongcloudBot/BongcloudBot) ($2.00)
+Agt 1 (BongcloudBot/BongcloudBot) posts the small blind of $0.01
+Agt 2 (PrologBot/PrologBot) posts the big blind of $0.02
+The button is in seat #1
+*** HOLE CARDS ***
+Dealt to Agt 2 (PrologBot/PrologBot) [Ad 3d]
+Dealt to Agt 1 (BongcloudBot/BongcloudBot) [3h 6d]
+Agt 1 (BongcloudBot/BongcloudBot) folds
+Uncalled bet of $0.01 returned to Agt 2 (PrologBot/PrologBot)
+Agt 2 (PrologBot/PrologBot) wins the pot ($0.02)
+*** SUMMARY ***
+Seat 1: Agt 2 (PrologBot/PrologBot) collected ($0.02)
+
+

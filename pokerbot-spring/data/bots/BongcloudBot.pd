@@ -12,4 +12,4 @@ AI_NAME=BongcloudBot
 
 # Options for your Bot:
 DEBUG=true
-PLAYSTYLE=-1
+PLAYSTYLE=0
