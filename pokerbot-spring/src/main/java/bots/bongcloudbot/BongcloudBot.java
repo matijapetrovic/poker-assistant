@@ -59,7 +59,7 @@ public class BongcloudBot implements Player {
 	public Action getAction() {
 		HandInfo hi = new HandInfo(card1, card2, seat, gameInfo, getActivePlayers(), didRaise);
 		kSession.setGlobal("gameInfo", gameInfo);
-		kSession.setGlobal("phase", 1);
+		kSession.setGlobal("phase", gameInfo.getStage());
 		kSession.insert(hi);
 		
 		if (gameInfo.getStage() == Holdem.PREFLOP) {
@@ -67,7 +67,7 @@ public class BongcloudBot implements Player {
 			kSession.fireAllRules();
 			didRaise = hi.isDidRaise();
 			kSession.delete(kSession.getFactHandle(hi));
-			return hi.getAction();
+			return hi.getAction() == null ? Action.callAction(gameInfo) : hi.getAction();
 		}
 		else {
 			kSession.fireAllRules();

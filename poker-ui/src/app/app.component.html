@@ -28,10 +28,11 @@
     <mat-card-actions>
       <button mat-raised-button (click)="startGame()">Play</button>
     </mat-card-actions>
-    <mat-card-footer class="center">
-      <div class="center">
-        <img *ngIf="image" [src]="image" alt="Poker bot game results">
-      </div>
-    </mat-card-footer>
   </mat-card>
+  <div class="center">
+    <div class="center">
+      <mat-spinner *ngIf="isImageLoading"></mat-spinner>
+      <img *ngIf="image" [src]="image" alt="Poker bot game results">
+    </div>
+  </div>
 </div>

@@ -75,9 +75,9 @@ public class BankrollGraphUI implements BankrollObserver {
 			stats.put(Integer.valueOf(i), new ArrayList<Map<String, Double>>());
 		}
 
-		createProgressFrame();
-		setupGuiUpdateTime();
-		this.progressFrame.setVisible(true);
+//		createProgressFrame();
+//		setupGuiUpdateTime();
+//		this.progressFrame.setVisible(true);
 
 	}
 
@@ -128,10 +128,10 @@ public class BankrollGraphUI implements BankrollObserver {
 	public synchronized void updateBankroll(int seatpermutation, Map<String, Double> playerDelta) {
 		currentGamesPlayed++;
 		currentSeatPermutation = seatpermutation;
-		if (currentGamesPlayed == totalGames) {
-			guiUpdateTimer.stop();
-			progressFrame.dispose();
-		}
+//		if (currentGamesPlayed == totalGames) {
+//			guiUpdateTimer.stop();
+//			progressFrame.dispose();
+//		}
 
 		List<Map<String, Double>> permutationStats = stats.get(Integer.valueOf(seatpermutation));
 		permutationStats.add(playerDelta);
@@ -150,7 +150,7 @@ public class BankrollGraphUI implements BankrollObserver {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		openChartInFrame(chart);
+		//openChartInFrame(chart);
 	}
 
 	private JFreeChart calcBankRollsAndCreateJFreeChart(int snapshotCurrentGamesPlayed) {

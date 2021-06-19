@@ -16,7 +16,7 @@ export interface Opponent {
 })
 export class AppComponent {
   title = 'poker-ui';
-  
+
   opponents: Opponent[] = [
     { value: 'DemoBot/SimpleBot', viewValue: 'Simple Bot' },
     { value: 'DemoBot/AlwaysCallBot', viewValue: 'Always call bot' },
@@ -28,6 +28,7 @@ export class AppComponent {
   form: FormGroup;
 
   image: any;
+  isImageLoading: boolean;
 
   constructor(private pokerBotService: PokerBotService) {
     this.form = new FormGroup({
@@ -37,13 +38,29 @@ export class AppComponent {
     });
   }
 
+  createImageFromBlob(image: Blob) {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
+      this.image = reader.result;
+    }, false);
+    if (image)
+      reader.readAsDataURL(image);
+  }
+
   startGame(): void {
     const botOptions: BotOptions = {
       playstyle: this.form.value.playstyle,
       numGames: this.form.value.numGames,
       opponent: this.form.value.opponent
     };
+    this.image = null;
+    this.isImageLoading = true;
     this.pokerBotService.startGame(botOptions).subscribe((image) => {
-      this.image = image });
+      this.isImageLoading = false;
+      this.createImageFromBlob(image);
+    }, error => {
+      this.isImageLoading = false;
+      console.log(error);
+    });
   }
 }
